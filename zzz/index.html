@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -258,23 +258,30 @@
 
 <script>
 const JSON_PATH = 'https://mux8.com/zzz/images/images.json';
-const INITIAL_BATCH = 25;
+const INITIAL_BATCH = 50; // Increased batch size for better initial coverage
 const BASE_IMAGE_URL = 'https://mux8.com/zzz/images/';
-const RANDOM_INSERT_INTERVAL = 2500;
+const INSERT_INTERVAL = 2500; // Time between inserting the next image
 const FADE_CLASS = 'fade-in';
 
-let images = [], available = [];
-const masonry = document.getElementById('masonry'); // Ensure masonry is available globally here
+let images = [];
+let nextImageIndex = 0; // Tracks the next image to be inserted
+const masonry = document.getElementById('masonry'); 
 
 // Load images.json
 fetch(JSON_PATH)
   .then(r => r.json())
   .then(arr => {
     images = Array.isArray(arr) ? arr : [];
-    available = images.slice();
+    if (images.length === 0) return;
+
+    // Initialize the display with a large batch
     renderInitial();
-    startRandomInsertions();
-    startAutoScroll(); // Starts after initial render
+    
+    // Start the sequential insertion loop
+    startSequentialInsertion();
+    
+    // Start the continuous upward scroll (using your non-resetting logic)
+    startAutoScroll(); 
   })
   .catch(err => console.error(err));
 
@@ -289,55 +296,57 @@ function createCard(meta){
 }
 
 function renderInitial(){
-  shuffleArray(available);
-  available.splice(0, INITIAL_BATCH).forEach(m => masonry.appendChild(createCard(m)));
+  // Add the first set of images in serial order
+  for (let i = 0; i < INITIAL_BATCH; i++) {
+    if (images.length === 0) break;
+    
+    const imageMeta = images[nextImageIndex % images.length]; // Use modulo for looping index
+    masonry.appendChild(createCard(imageMeta));
+    nextImageIndex++; // Increment index for the next insertion
+  }
 }
 
-function startRandomInsertions(){
+function startSequentialInsertion(){
   setInterval(() => {
     if (!images.length) return;
-    const pick = images[Math.floor(Math.random()*images.length)];
+    
+    // 1. Get the next image in serial order, looping back to the start if needed.
+    const pick = images[nextImageIndex % images.length];
     const card = createCard(pick);
-    const children = masonry.children;
-    const idx = children.length ? Math.floor(Math.random()*children.length) : 0;
-    if (idx >= children.length) masonry.appendChild(card);
-    else masonry.insertBefore(card, children[idx]);
-    // Only remove older elements if the count is over a threshold
-    if (masonry.children.length > 250) masonry.removeChild(masonry.firstElementChild);
-  }, RANDOM_INSERT_INTERVAL);
+    
+    // 2. Insert the new card at the bottom (end) of the masonry element.
+    masonry.appendChild(card);
+    
+    // 3. Advance the index.
+    nextImageIndex++;
+    
+    // 4. Clean up: Remove the oldest element (first child) that has scrolled off-screen.
+    // This ensures memory management and maintains the continuous flow.
+    if (masonry.children.length > 250) { 
+      masonry.removeChild(masonry.firstElementChild);
+    }
+  }, INSERT_INTERVAL);
 }
 
-function shuffleArray(a){
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
+// REMOVED shuffleArray function as it's no longer needed.
 
-// Auto-scrolling upward
+
+// Auto-scrolling upward: NON-RESETTING (Kept from previous solution)
 let scrollY = 0; // Tracks the CSS translation value
+
 function startAutoScroll(){
-  const speed = 0.5; // Increased speed for better visibility of the effect
-  const viewportHeight = window.innerHeight;
-  // Max translation is the extra space provided by the 400vh (300vh, since 100vh is visible)
-  // Or simply a large number that ensures scrolling past the visible content.
-  const maxTravel = 3 * viewportHeight; // e.g., 300% of the visible area
+  const speed = 0.5; // Constant scroll speed
 
   function step(){
     scrollY += speed;
     
-    if (scrollY > maxTravel) {
-      // If we scrolled past the travel distance, reset the scrollY position.
-      // The image insertion/deletion should handle content shuffling at the edges.
-      scrollY = 0;
-    }
-    
     // Use CSS transform to move the element upwards.
+    // No reset, relying on content addition/removal for infinite feel.
     masonry.style.transform = `translateY(-${scrollY.toFixed(2)}px)`;
     
     requestAnimationFrame(step);
   }
+  
   requestAnimationFrame(step);
 }
 
