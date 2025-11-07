@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Zizhizhe 自职者 — Gallery</title>
 
+<meta name="description" content="Zizhizhe 自职者 (a HuanMux brand) is a premier IT services and outsourcing provider specializing in Web and App Development, Graphic Design, UI/UX Design, Digital Marketing, and more. Hire an expert for your tasks!"/>
+<meta name="keywords" content="huanmux, HuanMux, Zizhizhe, zi zhi zhe, Mux ZZZ, mux zzz, 自职者, 幻木心, IT services, outsourcing, web development, UI/UX design, digital marketing, AI automation, graphic design, content writing, app development, CRM development"/>
+<meta name="author" content="Zizhizhe 自职者"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link rel="icon" type="image/png" href="https://mux8.com/zzz/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://mux8.com/zzz/favicon-16x16.png" sizes="16x16">
+<link rel="apple-touch-icon" sizes="180x180" href="https://mux8.com/zzz/apple-touch-icon.png">
+
+<meta property="og:title" content="Zizhizhe 自职者 — IT Services & Outsourcing"/>
+<meta property="og:description" content="A network of professional experts delivering top-tier services in Web Development, UI/UX Design, Digital Marketing, and more."/>
+<meta property="og:url" content="https://mux8.com/zzz"/>
+<meta property="og:site_name" content="Zizhizhe 自职者"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://mux8.com/assets/ogimage/zzz-banner.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@huanmux"/> <meta name="twitter:title" content="Zizhizhe 自职者 — IT Services & Outsourcing"/>
+<meta name="twitter:description" content="Hire dedicated experts for Design, Development, Marketing, and AI solutions."/>
+<meta name="twitter:image" content="https://mux8.com/assets/ogimage/zzz-banner.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -30,16 +51,16 @@
     overflow: hidden;
   }
 
-  #masonry {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    column-gap: var(--gap);
-    column-count: 1;
-    z-index: 0;
-  }
+#masonry {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400vh;
+    column-gap: var(--gap);
+    column-count: 1;
+    z-index: 0;
+  }
   @media (min-width: 480px) { #masonry { column-count: 2; } }
   @media (min-width: 800px) { #masonry { column-count: 3; } }
   @media (min-width: 1200px) { #masonry { column-count: 4; } }
@@ -166,7 +187,7 @@
     position: fixed;
     right: 18px;
     bottom: 18px;
-    background: rgba(0, 0, 0, 0.04);
+    background: rgba(255, 255, 255, 0.94);
     padding: 10px 18px;
     border-radius: 999px;
     font-size: 13px;
@@ -187,10 +208,16 @@
   .status:hover {
     background: #1877f2;
     color: white;
+    scale: 1.05;
   }
   .status:hover i {
     color: white;
     transform: scale(1.2);
+  }
+  .status:active {
+    color: white;
+    background: black;
+    transform: scale(0.9);
   }
 </style>
 </head>
@@ -230,81 +257,93 @@
   </div>
 
 <script>
-const JSON_PATH = '/zzz/images/images.json';
+const JSON_PATH = 'https://mux8.com/zzz/images/images.json';
 const INITIAL_BATCH = 25;
 const BASE_IMAGE_URL = 'https://mux8.com/zzz/images/';
 const RANDOM_INSERT_INTERVAL = 2500;
 const FADE_CLASS = 'fade-in';
 
 let images = [], available = [];
-const masonry = document.getElementById('masonry');
+const masonry = document.getElementById('masonry'); // Ensure masonry is available globally here
 
 // Load images.json
 fetch(JSON_PATH)
-  .then(r => r.json())
-  .then(arr => {
-    images = Array.isArray(arr) ? arr : [];
-    available = images.slice();
-    renderInitial();
-    startRandomInsertions();
-    startAutoScroll();
-  })
-  .catch(err => console.error(err));
+  .then(r => r.json())
+  .then(arr => {
+    images = Array.isArray(arr) ? arr : [];
+    available = images.slice();
+    renderInitial();
+    startRandomInsertions();
+    startAutoScroll(); // Starts after initial render
+  })
+  .catch(err => console.error(err));
 
 function createCard(meta){
-  const fig = document.createElement('figure');
-  fig.className = 'card ' + FADE_CLASS;
-  const img = document.createElement('img');
-  img.src = BASE_IMAGE_URL + meta.path; 
-  img.alt = meta.name || '';
-  fig.appendChild(img);
-  return fig;
+  const fig = document.createElement('figure');
+  fig.className = 'card ' + FADE_CLASS;
+  const img = document.createElement('img');
+  img.src = BASE_IMAGE_URL + meta.path; 
+  img.alt = meta.name || '';
+  fig.appendChild(img);
+  return fig;
 }
 
 function renderInitial(){
-  shuffleArray(available);
-  available.splice(0, INITIAL_BATCH).forEach(m => masonry.appendChild(createCard(m)));
+  shuffleArray(available);
+  available.splice(0, INITIAL_BATCH).forEach(m => masonry.appendChild(createCard(m)));
 }
 
 function startRandomInsertions(){
-  setInterval(() => {
-    if (!images.length) return;
-    const pick = images[Math.floor(Math.random()*images.length)];
-    const card = createCard(pick);
-    const children = masonry.children;
-    const idx = children.length ? Math.floor(Math.random()*children.length) : 0;
-    if (idx >= children.length) masonry.appendChild(card);
-    else masonry.insertBefore(card, children[idx]);
-    if (masonry.children.length > 250) masonry.removeChild(masonry.firstElementChild);
-  }, RANDOM_INSERT_INTERVAL);
+  setInterval(() => {
+    if (!images.length) return;
+    const pick = images[Math.floor(Math.random()*images.length)];
+    const card = createCard(pick);
+    const children = masonry.children;
+    const idx = children.length ? Math.floor(Math.random()*children.length) : 0;
+    if (idx >= children.length) masonry.appendChild(card);
+    else masonry.insertBefore(card, children[idx]);
+    // Only remove older elements if the count is over a threshold
+    if (masonry.children.length > 250) masonry.removeChild(masonry.firstElementChild);
+  }, RANDOM_INSERT_INTERVAL);
 }
 
 function shuffleArray(a){
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
 }
 
 // Auto-scrolling upward
-let scrollY = 0;
+let scrollY = 0; // Tracks the CSS translation value
 function startAutoScroll(){
-  const speed = 0.25;
-  function step(){
-    scrollY += speed;
-    if (scrollY > document.body.scrollHeight - window.innerHeight) {
-      scrollY = 0;
-    }
-    window.scrollTo({ top: scrollY, left: Math.sin(Date.now()/4000)*80, behavior: 'auto' });
-    requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
+  const speed = 0.5; // Increased speed for better visibility of the effect
+  const viewportHeight = window.innerHeight;
+  // Max translation is the extra space provided by the 400vh (300vh, since 100vh is visible)
+  // Or simply a large number that ensures scrolling past the visible content.
+  const maxTravel = 3 * viewportHeight; // e.g., 300% of the visible area
+
+  function step(){
+    scrollY += speed;
+    
+    if (scrollY > maxTravel) {
+      // If we scrolled past the travel distance, reset the scrollY position.
+      // The image insertion/deletion should handle content shuffling at the edges.
+      scrollY = 0;
+    }
+    
+    // Use CSS transform to move the element upwards.
+    masonry.style.transform = `translateY(-${scrollY.toFixed(2)}px)`;
+    
+    requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
 }
 
 // Facebook floating button
 document.getElementById('status').addEventListener('click', () => {
-  window.open('https://www.facebook.com/zizhizhe', '_blank');
+  window.open('https://www.facebook.com/zizhizhe', '_blank');
 });
 </script>
 </body>
