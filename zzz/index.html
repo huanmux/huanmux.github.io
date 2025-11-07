@@ -15,8 +15,7 @@
     --gap: 12px;
     --max-width: 1100px;
     --logo-size: 120px;
-    /* New Marquee Variables */
-    --marquee-speed: 60s; /* Adjust speed as needed */
+    --marquee-speed: 60s;
     --marquee-text-color: #333;
     --marquee-bg-color: #f7f7f7;
     --marquee-height: 25px;
@@ -28,10 +27,9 @@
     margin: 0;
     background: var(--bg);
     font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
-    overflow: hidden; /* auto-scroll handled manually */
+    overflow: hidden;
   }
 
-  /* Masonry behind everything */
   #masonry {
     position: fixed;
     top: 0;
@@ -69,7 +67,6 @@
     to { opacity: 1; transform: none; }
   }
 
-  /* Center white strip with logo */
   .center-strip {
     position: fixed;
     top: 50%;
@@ -80,12 +77,11 @@
     z-index: 2;
     /* Changed from flex to block to easily position marquees on top/bottom */
     display: block; 
-    text-align: center; /* Center the logo */
+    text-align: center;
     padding: 30px 0;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
   }
 
-  /* --- Marquee Styles --- */
   .marquee-container {
     position: absolute;
     width: 100%;
@@ -113,38 +109,33 @@
     font-weight: 600;
     font-size: var(--marquee-font-size);
     color: var(--marquee-text-color);
-    /* The content is repeated in HTML to ensure a continuous loop */
   }
 
-  /* Animations for movement */
   .top-marquee .marquee-content {
-    /* Right to Left movement */
     animation: marquee-rtl var(--marquee-speed) linear infinite;
-    transform: translate3d(0, 0, 0); /* Force hardware acceleration */
+    transform: translate3d(0, 0, 0);
   }
 
   .bottom-marquee .marquee-content {
-    /* Left to Right movement */
     animation: marquee-ltr var(--marquee-speed) linear infinite;
-    animation-delay: calc(var(--marquee-speed) / -2); /* Start half-way to smooth loop */
-    transform: translate3d(0, 0, 0); /* Force hardware acceleration */
+    animation-delay: calc(var(--marquee-speed) / -2);
+    transform: translate3d(0, 0, 0);
   }
 
   @keyframes marquee-rtl {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Half the content width */
+    100% { transform: translateX(-50%); }
   }
 
   @keyframes marquee-ltr {
-    0% { transform: translateX(-50%); } /* Start at the half-point */
+    0% { transform: translateX(-50%); }
     100% { transform: translateX(0); }
   }
-  /* --- End Marquee Styles --- */
 
   .logo {
     /* Adjusted position property to relative for flow */
     position: relative; 
-    display: inline-block; /* Keep it centered inside the center-strip */
+    display: inline-block;
     width: var(--logo-size);
     height: var(--logo-size);
     border-radius: 50%;
@@ -157,11 +148,9 @@
     margin: var(--marquee-height) auto; 
   }
   
-  /* Reset logo specific display properties */
   .center-strip .logo {
     display: flex;
   }
-
 
   .logo img {
     width: 100%;
@@ -237,12 +226,13 @@
 
   <div class="status" id="status">
     <i class="fab fa-facebook"></i>
-    Visit our Facebook
+    Hire one of our experts
   </div>
 
 <script>
 const JSON_PATH = '/zzz/images/images.json';
 const INITIAL_BATCH = 25;
+const BASE_IMAGE_URL = 'https://mux8.com/zzz/images/';
 const RANDOM_INSERT_INTERVAL = 2500;
 const FADE_CLASS = 'fade-in';
 
@@ -265,7 +255,7 @@ function createCard(meta){
   const fig = document.createElement('figure');
   fig.className = 'card ' + FADE_CLASS;
   const img = document.createElement('img');
-  img.src = meta.path;
+  img.src = BASE_IMAGE_URL + meta.path; 
   img.alt = meta.name || '';
   fig.appendChild(img);
   return fig;
