@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Zizhizhe 自职者 — Gallery</title>
 
-<!-- Montserrat -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -17,6 +15,12 @@
     --gap: 12px;
     --max-width: 1100px;
     --logo-size: 120px;
+    /* New Marquee Variables */
+    --marquee-speed: 60s; /* Adjust speed as needed */
+    --marquee-text-color: #333;
+    --marquee-bg-color: #f7f7f7;
+    --marquee-height: 25px;
+    --marquee-font-size: 12px;
   }
 
   html, body {
@@ -74,24 +78,90 @@
     transform: translateY(-50%);
     background: white;
     z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* Changed from flex to block to easily position marquees on top/bottom */
+    display: block; 
+    text-align: center; /* Center the logo */
     padding: 30px 0;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
   }
 
+  /* --- Marquee Styles --- */
+  .marquee-container {
+    position: absolute;
+    width: 100%;
+    height: var(--marquee-height);
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: var(--marquee-height);
+    background: var(--marquee-bg-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+
+  .top-marquee {
+    top: 0;
+    left: 0;
+  }
+
+  .bottom-marquee {
+    bottom: 0;
+    left: 0;
+  }
+
+  .marquee-content {
+    display: inline-block;
+    padding: 0 10px;
+    font-weight: 600;
+    font-size: var(--marquee-font-size);
+    color: var(--marquee-text-color);
+    /* The content is repeated in HTML to ensure a continuous loop */
+  }
+
+  /* Animations for movement */
+  .top-marquee .marquee-content {
+    /* Right to Left movement */
+    animation: marquee-rtl var(--marquee-speed) linear infinite;
+    transform: translate3d(0, 0, 0); /* Force hardware acceleration */
+  }
+
+  .bottom-marquee .marquee-content {
+    /* Left to Right movement */
+    animation: marquee-ltr var(--marquee-speed) linear infinite;
+    animation-delay: calc(var(--marquee-speed) / -2); /* Start half-way to smooth loop */
+    transform: translate3d(0, 0, 0); /* Force hardware acceleration */
+  }
+
+  @keyframes marquee-rtl {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Half the content width */
+  }
+
+  @keyframes marquee-ltr {
+    0% { transform: translateX(-50%); } /* Start at the half-point */
+    100% { transform: translateX(0); }
+  }
+  /* --- End Marquee Styles --- */
+
   .logo {
+    /* Adjusted position property to relative for flow */
+    position: relative; 
+    display: inline-block; /* Keep it centered inside the center-strip */
     width: var(--logo-size);
     height: var(--logo-size);
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    display: flex;
     align-items: center;
     justify-content: center;
     background: #fff;
+    /* Added margin to give space between logo and marquee container */
+    margin: var(--marquee-height) auto; 
   }
+  
+  /* Reset logo specific display properties */
+  .center-strip .logo {
+    display: flex;
+  }
+
 
   .logo img {
     width: 100%;
@@ -137,28 +207,41 @@
 </head>
 <body>
 
-  <!-- Background masonry grid -->
   <main>
     <div id="masonry" class="masonry" aria-live="polite"></div>
   </main>
 
-  <!-- Foreground centered white strip with logo -->
   <div class="center-strip">
+
+    <div class="marquee-container top-marquee">
+      <div class="marquee-content">
+        Graphic Design ✦ SEO ✦ UI Design ✦ App Development ✦ Web Development ✦ Digital Marketing ✦ Content Writing ✦ AEO ✦ English Translation ✦ Book Publication ✦ Game Development ✦ 2D Design ✦ Social Media Marketing ✦ Organic Growth ✦ Social Media Management ✦ UX Design ✦ UI & UX Development ✦ Marketing Copywriting ✦ Product Design ✦ Merch Design ✦ AI & Automation ✦ Desktop Software ✦ Enterprise Software ✦ CRM Development ✦ Database & Server Maintenance ✦ Ghostwriting ✦
+        Graphic Design ✦ SEO ✦ UI Design ✦ App Development ✦ Web Development ✦ Digital Marketing ✦ Content Writing ✦ AEO ✦ English Translation ✦ Book Publication ✦ Game Development ✦ 2D Design ✦ Social Media Marketing ✦ Organic Growth ✦ Social Media Management ✦ UX Design ✦ UI & UX Development ✦ Marketing Copywriting ✦ Product Design ✦ Merch Design ✦ AI & Automation ✦ Desktop Software ✦ Enterprise Software ✦ CRM Development ✦ Database & Server Maintenance ✦ Ghostwriting ✦
+      </div>
+    </div>
+
     <div class="logo" aria-hidden="true">
       <img src="https://avatars.githubusercontent.com/u/242250430?s=200&v=4" alt="Zizhizhe logo">
     </div>
+
+    <div class="marquee-container bottom-marquee">
+      <div class="marquee-content">
+        ✦ HTML ✦ Python ✦ CSS ✦ Java ✦ JavaScript ✦ C & C++ ✦ Fortran ✦ PHP ✦ PostgreSQL ✦ Canva ✦ Wordpress ✦ MySQL ✦ MongoDB ✦ NextJS ✦ Vite ✦ Design Theory ✦ Consumer Psychology ✦ Presentation ✦ Business Productivity Audits ✦ Kotlin ✦ Flutter ✦ OpenGL ✦ LaTeX 
+        ✦ HTML ✦ Python ✦ CSS ✦ Java ✦ JavaScript ✦ C & C++ ✦ Fortran ✦ PHP ✦ PostgreSQL ✦ Canva ✦ Wordpress ✦ MySQL ✦ MongoDB ✦ NextJS ✦ Vite ✦ Design Theory ✦ Consumer Psychology ✦ Presentation ✦ Business Productivity Audits ✦ Kotlin ✦ Flutter ✦ OpenGL ✦ LaTeX 
+      </div>
+    </div>
+
   </div>
 
   <h1>Zizhizhe 自职者 — Gallery</h1>
 
-  <!-- Floating Facebook button -->
   <div class="status" id="status">
     <i class="fab fa-facebook"></i>
     Visit our Facebook
   </div>
 
 <script>
-const JSON_PATH = 'images/images.json';
+const JSON_PATH = '/zzz/images/images.json';
 const INITIAL_BATCH = 25;
 const RANDOM_INSERT_INTERVAL = 2500;
 const FADE_CLASS = 'fade-in';
