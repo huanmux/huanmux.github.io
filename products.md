@@ -6,6 +6,8 @@ Tentative list of official Mux products accessible by the public.
 
 |Name|Live URL|Static Site|Persistent Storage|
 |---|---|:---:|:---:|
+| <img src="https://huanmux.github.io/assets/logo/liaotian.png" width="40" height="40" alt="icon"> **LiaoTian** | [liaotian.mux8.com](https://liaotian.mux8.com) | ✅ | ❌ |
+| <img src="https://avatars.githubusercontent.com/u/235305696?s=200&v=4" width="40" height="40" alt="icon"> **BRAX** | [brax.mux8.com](https://brax.mux8.com) | ✅ | 🔶 |
 | <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--document-add-bold-duotone.svg" width="40" height="40" alt="icon"> **Acado** | [acado.mux8.com](https://acado.mux8.com) | ✅ | ✅ |
 | <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--shield-network-bold-duotone.svg" width="40" height="40" alt="icon"> **iKnow** | [mux8.com/iknow](https://mux8.com/iknow) | ✅ | ❌ |
 | <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--bus-bold-duotone.svg" width="40" height="40" alt="icon"> **Jackbus** | [mux8.com/metrobus-tracker](https://mux8.com/metrobus-tracker) | ✅ | ❌ |
@@ -19,6 +21,7 @@ Tentative list of official Mux products accessible by the public.
 
 |Name|Permalink|Live URL|Platform|Engine|Multiplayer|Data Storage|
 |---|---|---|---|:---:|:---:|:---:|
+|**TypeHero**|typehero.vercel.app|typehero.mux8.com|Self-hosted| ❌ | ❌ | Local |
 |**Faculty of Survival**|facultyofsurvival.vercel.app|fos.mux8.com|Self-hosted| ❌ | ❌ | Local |
 |**Goofy Gunners**|[[...]](https://www.roblox.com/games/107542071734450/Goofy-Gunners)|❌ (In-app)|Roblox|Roblox Studio| ✅ | Roblox DataStore |
 |**Goofy Obby**|[[...]](https://www.roblox.com/games/76587171520946/Goofy-Obby)|❌ (In-app)|Roblox|Roblox Studio| ✅ | Roblox DataStore|
