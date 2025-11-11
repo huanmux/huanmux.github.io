@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ahnaf bin Enam - ZiZhiZhe</title>
+  <meta name="description" content="Meet Ahnaf, working as a COO for ZiZhiZhe since 2025." />
+
+  <style>
+    :root{
+      --brand: #ff0a45;
+      --accent1: #ff3a6b;
+      --accent2: #ff7a45;
+      --muted: #6b6b6b;
+      --glass: rgba(255,255,255,0.85);
+      --bg: #fbfbfc;
+      --card: #ffffff;
+      --shadow-1: 0 6px 18px rgba(14,20,30,0.08);
+      --shadow-inset: inset 0 6px 18px rgba(0,0,0,0.06);
+      --radius: 18px;
+    }
+
+    /* animated lava lamp gradient (slow) */
+    @keyframes lavaFlow {
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
+    }
+
+    /* page layout */
+    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg);color:#111;}
+    .page{min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:48px 32px;gap:28px;}
+
+    /* header with company logo */
+    .brand{
+      width:100%;max-width:1100px;display:flex;align-items:center;gap:16px;justify-content:flex-start;
+    }
+    .brand .logo img{
+      width:64px;height:64px;border-radius:14px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-1), var(--shadow-inset);
+      border:1px solid rgba(255,10,69,0.15);
+      flex-shrink:0;overflow:hidden;
+    }
+    .brand .logo img{width:54px;height:54px;object-fit:contain}
+    .brand .title{font-weight:700;font-size:20px;letter-spacing:0.2px}
+    .brand .subtitle{font-weight:500;color:var(--muted);font-size:13px}
+
+    /* main card */
+    .card-wrap{width:100%;max-width:1100px;background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,250,250,0.95));border-radius:22px;padding:28px;box-shadow:var(--shadow-1);position:relative;overflow:visible}
+
+    /* floating animated border (lava lamp feel) */
+    .card-wrap::before{
+      content:'';position:absolute;inset:-3px;border-radius:26px;padding:3px;pointer-events:none;z-index:0;
+      background:linear-gradient(60deg, var(--brand), var(--accent1), var(--accent2), #ffd1a8, #d24cff);
+      background-size:300% 300%;filter:blur(10px) saturate(1.1);opacity:0.9;animation:lavaFlow 12s linear infinite;
+      mask: linear-gradient(#000,#000);
+    }
+    .card{position:relative;z-index:2;background:var(--card);border-radius:18px;padding:28px;display:grid;grid-template-columns:360px 1fr;gap:28px;align-items:start;border:1px solid rgba(10,10,10,0.03)}
+
+    /* employee photo panel */
+    .avatar-panel{display:flex;flex-direction:column;align-items:center;gap:18px;padding:18px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.92), rgba(248,248,249,0.9));box-shadow:var(--shadow-inset);border:1px solid rgba(255,10,69,0.06)}
+    .avatar{width:220px;height:220px;border-radius:20px;overflow:hidden;box-shadow: 0 10px 30px rgba(20,20,40,0.08);display:flex;align-items:center;justify-content:center;border:10px solid rgba(255,255,255,0.6)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .meta{width:100%;text-align:center}
+    .name{font-size:20px;font-weight:800;margin:0}
+    .role{font-size:14px;color:var(--muted);margin-top:6px}
+
+    .badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:6px}
+    .badge{padding:8px 12px;border-radius:999px;background:linear-gradient(90deg, rgba(255,10,69,0.08), rgba(255,122,69,0.06));font-weight:600;font-size:12px;display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,10,69,0.06)}
+
+    /* main info area */
+    .info{display:flex;flex-direction:column;gap:14px}
+    .intro{display:flex;align-items:center;gap:12px}
+    .intro .headline{font-size:22px;font-weight:800}
+    .intro .company-flag{margin-left:auto;display:flex;align-items:center;gap:10px}
+    .pill{background:linear-gradient(90deg,var(--brand),var(--accent1));padding:8px 12px;border-radius:999px;color:white;font-weight:700;display:inline-flex;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(255,10,69,0.12);border:1px solid rgba(255,255,255,0.12)}
+
+    .bio{padding:14px;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(250,250,250,0.6));border-radius:12px;border:1px solid rgba(10,10,10,0.02);font-size:15px;color:#222}
+
+    .details{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:12px}
+    .detail{background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,250,250,0.95));padding:12px;border-radius:10px;border:1px solid rgba(10,10,10,0.03);box-shadow:var(--shadow-inset)}
+    .detail h4{margin:0;font-size:13px;color:var(--muted)}
+    .detail p{margin:6px 0 0;font-weight:700}
+
+    /* awards */
+    .awards{display:flex;flex-direction:column;gap:8px}
+    .award{display:flex;align-items:center;gap:12px;padding:12px;border-radius:12px;background:linear-gradient(90deg, rgba(255,250,230,0.9), rgba(255,248,240,0.9));border:1px solid rgba(200,160,0,0.12);box-shadow: 0 8px 20px rgba(220,170,0,0.06);}
+    .award .icon{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px}
+    .award .title{font-weight:800;color:#8b5c00}
+    .award .meta{color:#775b00;font-size:13px}
+
+    /* socials */
+    .socials{display:flex;gap:12px;flex-wrap:wrap}
+    .social{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:linear-gradient(90deg, rgba(255,255,255,0.6), rgba(245,245,246,0.6));border:1px solid rgba(10,10,10,0.03);box-shadow:var(--shadow-1);text-decoration:none;color:#111;font-weight:700;transition:transform .18s ease, box-shadow .18s ease}
+    .social:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(20,20,40,0.08)}
+    .social img{width:20px;height:20px;object-fit:contain;border-radius:4px}
+
+    /* actions */
+    .actions{display:flex;gap:12px;align-items:center}
+    .btn{padding:10px 14px;border-radius:12px;border:none;font-weight:800;background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(245,245,246,0.95));box-shadow:var(--shadow-1);cursor:pointer;border:1px solid rgba(10,10,10,0.04);transition:transform .18s ease, box-shadow .18s ease}
+    .btn.primary{background:linear-gradient(90deg,var(--brand),var(--accent1));color:white;border:1px solid rgba(255,255,255,0.12)}
+    .btn:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(20,20,40,0.08)}
+    .btn.primary:hover{filter:brightness(1.03)}
+
+    /* floating back pill */
+    .back-pill{position:fixed;left:22px;bottom:22px;z-index:999;display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:linear-gradient(90deg,var(--brand),var(--accent1));color:#fff;font-weight:800;box-shadow:0 14px 40px rgba(255,10,69,0.15);border:1px solid rgba(255,255,255,0.12);text-decoration:none}
+    .back-pill svg{width:16px;height:16px;transform:translateX(-2px)}
+    .back-pill:hover{transform:translateY(-6px);box-shadow:0 28px 60px rgba(255,10,69,0.16)}
+
+    /* footer */
+    footer{width:100%;max-width:1100px;padding:14px 0;text-align:center;color:var(--muted);font-weight:600}
+
+    /* subtle hover micro interactions */
+    .avatar:hover{transform:scale(1.02);transition:transform .35s cubic-bezier(.2,.9,.2,1)}
+    .badge:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(20,20,40,0.06)}
+
+    /* responsive tweaks */
+    @media (max-width:880px){
+      .card{grid-template-columns:1fr;}
+      .avatar{width:180px;height:180px}
+      .brand{justify-content:center}
+      .brand .title{display:none}
+      .page{padding:24px}
+    }
+
+    @media (max-width:480px){
+      :root{--radius:14px}
+      .page{padding:18px}
+      .card-wrap{padding:18px}
+      .card{padding:18px;gap:14px}
+      .avatar{width:150px;height:150px}
+      .intro .headline{font-size:18px}
+      .details{grid-template-columns:1fr}
+      .back-pill{left:12px;bottom:12px;padding:10px 14px}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="brand" aria-label="Company header">
+      <div class="logo" aria-hidden="true">
+        <img src="https://avatars.githubusercontent.com/u/242250430?s=200&v=4" alt="ZiZhiZhe logo" />
+      </div>
+      <div>
+        <div class="title">ZiZhiZhe</div>
+        <div class="subtitle">Employee Spotlight</div>
+      </div>
+    </header>
+
+    <main class="card-wrap" role="main">
+      <section class="card" aria-labelledby="employee-name">
+        <aside class="avatar-panel" aria-label="Employee photo and quick meta">
+          <div class="avatar" id="avatar">
+            <img src="" alt="Employee photo" />
+          </div>
+          <div class="meta">
+            <h2 id="employee-name" class="name"></h2>
+            <div class="role" id="employee-role"></div>
+            <div class="badges" id="badges">
+              <!-- badges injected -->
+            </div>
+          </div>
+        </aside>
+
+        <div class="info">
+          <div class="intro">
+            <div class="headline" id="headline"></div>
+            <div class="company-flag">
+              <div class="pill">ZiZhiZhe</div>
+            </div>
+          </div>
+
+          <div class="bio" id="bio"></div>
+
+          <div class="details">
+            <div class="detail">
+              <h4>Department</h4>
+              <p id="department"></p>
+            </div>
+            <div class="detail">
+              <h4>Location</h4>
+              <p id="location"></p>
+            </div>
+            <div class="detail">
+              <h4>Joined</h4>
+              <p id="joined"></p>
+            </div>
+            <div class="detail">
+              <h4>Email</h4>
+              <p id="email"></p>
+            </div>
+          </div>
+
+          <div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-top:6px">
+              <h3 style="margin:0;font-size:16px">Awards & Achievements</h3>
+              <div class="actions">
+                <button class="btn">Print</button>
+                <button class="btn primary">Send Congrats</button>
+              </div>
+            </div>
+
+            <div class="awards" id="awards" style="margin-top:12px">
+              <!-- awards injected -->
+            </div>
+
+            <h4 style="margin-top:18px;margin-bottom:8px">Contact</h4>
+            <div class="socials" id="socials">
+              <!-- social links injected -->
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>© Mux 2025</footer>
+
+    <a class="back-pill" href="#" id="backHome" role="button">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M15 18l-6-6 6-6" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Back to Home
+    </a>
+  </div>
+
+  <script>
+    // === employee JSON ===
+    const employeeData = {
+      "photo": "https://media-ccu2-2.cdn.whatsapp.net/v/t61.24694-24/504083362_1132570628818143_8805876865581543532_n.jpg?ccb=11-4&oh=01_Q5Aa3AFc69zCmVBI6OXU77vzsKYPYCyA7rojmmMkjkOwKUCTCg&oe=69200144&_nc_sid=5e03e0&_nc_cat=108",
+      "name": "Ahnaf B. Enam",
+      "role": "Chief Operations Officer (COO)",
+      "headline": "Crafting delightful product experiences with purpose & polish",
+      "bio": "Ahnaf has been shipping intuitive interfaces at an industrial scale. He brings a unique blend of user experience, visual and technical systems to our company table — focusing on contract-based client satisfaction.",
+      "department": "Design",
+      "location": "Dhaka, Bangladesh 🇧🇩",
+      "joined": "June 2025",
+      "email": "ahnaf@mux8.com",
+      "badges": ["MVE 2025","10+ Projects","Design Mentor"],
+      "awards": [
+        {"title":"Most Valuable Employee, Jun 2025","meta":"Recognized for outstanding work","icon":"🏆"},
+        {"title":"Most Valuable Employee, Oct 2025","meta":"Recognized for outstanding work","icon":"🏆"}
+      ],
+      "socials": [
+        {"name":"Facebook","logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png","url":"https://www.facebook.com/ahnaf.bin.enam"},
+        {"name":"LiaoTian","logo":"https://mux8.com/assets/logo/liaotian.png","url":"https://liaotian.mux8.com/ahnaf"}
+      ]
+    };
+
+    // === mounting into DOM ===
+    function mountEmployee(data){
+      // Avatar
+      const avatar = document.querySelector('#avatar img');
+      avatar.src = data.photo;
+      avatar.alt = `${data.name} photo`;
+
+      // Text fields
+      document.getElementById('employee-name').textContent = data.name;
+      document.getElementById('employee-role').textContent = data.role;
+      document.getElementById('headline').textContent = data.headline;
+      document.getElementById('bio').textContent = data.bio;
+      document.getElementById('department').textContent = data.department;
+      document.getElementById('location').textContent = data.location;
+      document.getElementById('joined').textContent = data.joined;
+      document.getElementById('email').textContent = data.email;
+
+      // Badges
+      const badgesEl = document.getElementById('badges');
+      badgesEl.innerHTML = '';
+      (data.badges||[]).forEach(b=>{
+        const span = document.createElement('span');
+        span.className = 'badge';
+        span.textContent = b;
+        badgesEl.appendChild(span);
+      });
+
+      // Awards
+      const awardsEl = document.getElementById('awards');
+      awardsEl.innerHTML = '';
+      (data.awards||[]).forEach(a=>{
+        const item = document.createElement('div');
+        item.className = 'award';
+        item.innerHTML = `
+          <div class=\"icon\">${a.icon || '🏅'}</div>
+          <div>
+            <div class=\"title\">${a.title}</div>
+            <div class=\"meta\">${a.meta}</div>
+          </div>
+        `;
+        awardsEl.appendChild(item);
+      });
+
+      // Socials (dynamic list with logo image paths)
+      const socialsEl = document.getElementById('socials');
+      socialsEl.innerHTML = '';
+      (data.socials||[]).forEach(s=>{
+        const a = document.createElement('a');
+        a.className = 'social';
+        a.href = s.url || '#';
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.innerHTML = `<img src=\"${s.logo}\" alt=\"${s.name}\" /> <span>${s.name}</span>`;
+        socialsEl.appendChild(a);
+      });
+
+      const brandLogo = document.querySelector('.brand .logo img');
+      if(brandLogo){
+        // placeholder
+      }
+    }
+
+    mountEmployee(employeeData);
+
+    // micro interactions for print and send
+    document.querySelector('.btn').addEventListener('click',()=>window.print());
+    document.querySelector('.btn.primary').addEventListener('click',()=>{
+      const subject = encodeURIComponent(`Congrats, ${employeeData.name}!`);
+      const body = encodeURIComponent(`Dear ${employeeData.name},\n\nCongratulations on your achievement!\n\n— ZiZhiZhe`);
+      window.location.href = `mailto:${employeeData.email}?subject=${subject}&body=${body}`;
+    });
+
+    document.getElementById('backHome').addEventListener('click',(e)=>{e.preventDefault();window.location.href = 'https://mux8.com/zzz/';});
+  </script>
+</body>
+</html>
