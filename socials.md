@@ -22,5 +22,6 @@ Social platform accounts managed by **Mux** staff:
 |<i class="fab fa-tiktok"></i> TikTok|[@huanmux](https://www.tiktok.com/@huanmux)|
 |<i class="fab fa-reddit"></i> Reddit|[@huanmux](https://www.reddit.com/r/huanmux/)|
 |<i class="fab fa-pinterest"></i> Pinterest|[@huanmuxglobal](https://www.pinterest.com/huanmuxglobal/)|
+|<i class="fas fa-dragon"></i> Liaoverse|[@mux](https://liaoverse.xyz/?user=mux)|
 
 For a list of all publicly-available Mux products, visit [this page](https://mux8.com/products).
