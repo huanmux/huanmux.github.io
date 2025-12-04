@@ -4,18 +4,18 @@ Tentative list of official Mux products accessible by the public.
 
 ## Mux Webapps
 
-|Name|Live URL|Static Site|Persistent Storage|
-|---|---|:---:|:---:|
-| <img src="https://huanmux.github.io/assets/logo/liaotian.png" width="40" height="40" alt="icon"> **LiaoTian** | [liaotian.dewanmukto.com](https://liaotian.dewanmukto.com) | ✅ | ❌ |
+|Name|Live URL|
+|---|:---|
+| <img src="https://huanmux.github.io/assets/logo/liaotian.png" width="40" height="40" alt="icon"> **Liaoverse** | [liaoverse.vercel.app](https://liaoverse.vercel.app) |
 | <img src="https://avatars.githubusercontent.com/u/235305696?s=200&v=4" width="40" height="40" alt="icon"> **BRAX** | [brax.dewanmukto.com](https://brax.dewanmukto.com) | ✅ | 🔶 |
 | <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--document-add-bold-duotone.svg" width="40" height="40" alt="icon"> **Acado** | [acado.dewanmukto.com](https://acado.dewanmukto.com) | ✅ | ✅ |
-| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--shield-network-bold-duotone.svg" width="40" height="40" alt="icon"> **iKnow** | [mux8.com/iknow](https://huanmux.github.io/iknow) | ✅ | ❌ |
-| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--bus-bold-duotone.svg" width="40" height="40" alt="icon"> **Jackbus** | [mux8.com/metrobus-tracker](https://huanmux.github.io/metrobus-tracker) | ✅ | ❌ |
-| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--case-bold-duotone.svg" width="40" height="40" alt="icon"> **Mizu CV** | [mizucv.dewanmukto.com](https://mizucv.dewanmukto.com) | ✅ | ✅ |
-| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--home-wifi-angle-bold-duotone.svg" width="40" height="40" alt="icon"> **Netstate** | [mux8.com/netstate](https://huanmux.github.io/netstate) | ✅ | ❌ |
-| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--pen-new-round-bold-duotone.svg" width="40" height="40" alt="icon"> (Mux) **Paint** | [mux8.com/paint](https://huanmux.github.io/paint) | ✅ | ❌ |
-| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--scanner-bold-duotone.svg" width="40" height="40" alt="icon"> (Mux) **QR** | [mux8.com/qrcode](https://huanmux.github.io/qrcode) | ✅ | ❌ |
-| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--plain-2-bold-duotone.svg" width="40" height="40" alt="icon"> **Skywatch** | [mux8.com/skywatch](https://huanmux.github.io/skywatch) | ✅ | ❌ |
+| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--shield-network-bold-duotone.svg" width="40" height="40" alt="icon"> **iKnow** | [/iknow](https://huanmux.github.io/iknow) | ✅ | ❌ |
+| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--bus-bold-duotone.svg" width="40" height="40" alt="icon"> **Jackbus** | [/metrobus-tracker](https://huanmux.github.io/metrobus-tracker) | ✅ | ❌ |
+| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--case-bold-duotone.svg" width="40" height="40" alt="icon"> **Mizu CV** | [cvbuilder.dewanmukto.com](https://cvbuilder.dewanmukto.com) | ✅ | ✅ |
+| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--home-wifi-angle-bold-duotone.svg" width="40" height="40" alt="icon"> **Netstate** | [/netstate](https://huanmux.github.io/netstate) | ✅ | ❌ |
+| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--pen-new-round-bold-duotone.svg" width="40" height="40" alt="icon"> (Mux) **Paint** | [/paint](https://huanmux.github.io/paint) | ✅ | ❌ |
+| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--scanner-bold-duotone.svg" width="40" height="40" alt="icon"> (Mux) **QR** | [/qrcode](https://huanmux.github.io/qrcode) | ✅ | ❌ |
+| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--plain-2-bold-duotone.svg" width="40" height="40" alt="icon"> **Skywatch** | [/skywatch](https://huanmux.github.io/skywatch) | ✅ | ❌ |
 
 ## Mux Games
 
