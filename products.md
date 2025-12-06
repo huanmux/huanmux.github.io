@@ -1,28 +1,20 @@
-Tentative list of official Mux products accessible by the public.
-
-面向公众开放的 Mux 官方产品暂定清单。
+Tentative list of official [Mux](https://huanmux.github.io) products accessible by the public.
 
 ## Mux Webapps
 
-|Name|Live URL|
-|---|:---|
-| <img src="https://huanmux.github.io/assets/logo/liaotian.png" width="40" height="40" alt="icon"> **Liaoverse** | [liaoverse.vercel.app](https://liaoverse.vercel.app) |
-| <img src="https://avatars.githubusercontent.com/u/235305696?s=200&v=4" width="40" height="40" alt="icon"> **BRAX** | [brax.dewanmukto.com](https://brax.dewanmukto.com) | ✅ | 🔶 |
-| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--document-add-bold-duotone.svg" width="40" height="40" alt="icon"> **Acado** | [acado.dewanmukto.com](https://acado.dewanmukto.com) | ✅ | ✅ |
-| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--shield-network-bold-duotone.svg" width="40" height="40" alt="icon"> **iKnow** | [/iknow](https://huanmux.github.io/iknow) | ✅ | ❌ |
-| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--bus-bold-duotone.svg" width="40" height="40" alt="icon"> **Jackbus** | [/metrobus-tracker](https://huanmux.github.io/metrobus-tracker) | ✅ | ❌ |
-| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--case-bold-duotone.svg" width="40" height="40" alt="icon"> **Mizu CV** | [cvbuilder.dewanmukto.com](https://cvbuilder.dewanmukto.com) | ✅ | ✅ |
-| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--home-wifi-angle-bold-duotone.svg" width="40" height="40" alt="icon"> **Netstate** | [/netstate](https://huanmux.github.io/netstate) | ✅ | ❌ |
-| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--pen-new-round-bold-duotone.svg" width="40" height="40" alt="icon"> (Mux) **Paint** | [/paint](https://huanmux.github.io/paint) | ✅ | ❌ |
-| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--scanner-bold-duotone.svg" width="40" height="40" alt="icon"> (Mux) **QR** | [/qrcode](https://huanmux.github.io/qrcode) | ✅ | ❌ |
-| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--plain-2-bold-duotone.svg" width="40" height="40" alt="icon"> **Skywatch** | [/skywatch](https://huanmux.github.io/skywatch) | ✅ | ❌ |
+||||
+|---|---|---|
+| <img src="https://huanmux.github.io/assets/logo/liaotian.png" width="40" height="40" alt="icon"> [**Liaoverse**](https://liaoverse.vercel.app) | <img src="https://avatars.githubusercontent.com/u/235305696?s=200&v=4" width="40" height="40" alt="icon"> [**BRAX**](https://braxapp.github.io) | <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--document-add-bold-duotone.svg" width="40" height="40" alt="icon"> [**Acado**](https://acadolife.vercel.app) |
+| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--shield-network-bold-duotone.svg" width="40" height="40" alt="icon"> [**iKnow**](https://huanmux.github.io/iknow) | <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--bus-bold-duotone.svg" width="40" height="40" alt="icon"> [**Jackbus**](https://huanmux.github.io/metrobus-tracker) | <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--case-bold-duotone.svg" width="40" height="40" alt="icon"> [**Mizu CV**](https://mizucv.vercel.app) |
+| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--home-wifi-angle-bold-duotone.svg" width="40" height="40" alt="icon"> [**Netstate**](https://huanmux.github.io/netstate) | <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--pen-new-round-bold-duotone.svg" width="40" height="40" alt="icon"> [(Mux) **Paint**](https://huanmux.github.io/paint) | <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--scanner-bold-duotone.svg" width="40" height="40" alt="icon"> [(Mux) **QR**](https://huanmux.github.io/qrcode) |
+| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--plain-2-bold-duotone.svg" width="40" height="40" alt="icon"> [**Skywatch**](https://huanmux.github.io/skywatch) |
 
 ## Mux Games
 
 |Name|Permalink|Live URL|Platform|Engine|Multiplayer|Data Storage|
 |---|---|---|---|:---:|:---:|:---:|
-|**TypeHero**|typehero.vercel.app|typehero.dewanmukto.com|Self-hosted| ❌ | ❌ | Local |
-|**Faculty of Survival**|facultyofsurvival.vercel.app|fos.dewanmukto.com|Self-hosted| ❌ | ❌ | Local |
+|**TypeHero**|typehero.vercel.app|typehero.muxday.com|Self-hosted| ❌ | ❌ | Local |
+|**Faculty of Survival**|facultyofsurvival.vercel.app|fos.muxday.com|Self-hosted| ❌ | ❌ | Local |
 |**Goofy Gunners**|[[...]](https://www.roblox.com/games/107542071734450/Goofy-Gunners)|❌ (In-app)|Roblox|Roblox Studio| ✅ | Roblox DataStore |
 |**Goofy Obby**|[[...]](https://www.roblox.com/games/76587171520946/Goofy-Obby)|❌ (In-app)|Roblox|Roblox Studio| ✅ | Roblox DataStore|
 |**Welcome to Bangladesh**|[[...]](https://www.roblox.com/games/13664220695/Welcome-to-Bangladesh)|❌ (In-app)|Roblox|Roblox Studio| ✅ | Roblox DataStore |
