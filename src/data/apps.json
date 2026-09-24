@@ -1,0 +1,74 @@
+[
+  {
+    "id": "muxai",
+    "name": "MuxAI",
+    "icon": "https://muxai.vercel.app/logo.png",
+    "url": "https://ai.mux8.com/",
+    "domain": "ai.mux8.com",
+    "tagline": "Customizable uncensored LLM personas",
+    "category": "Intelligence"
+  },
+  {
+    "id": "serafina",
+    "name": "Serafina",
+    "icon": "https://serafina.mux8.com/favicon.png",
+    "url": "https://serafina.mux8.com/",
+    "domain": "serafina.mux8.com",
+    "tagline": "Virtual private consultant (subset of MuxAI).",
+    "category": "Intelligence"
+  },
+  {
+    "id": "makron",
+    "name": "Makron",
+    "icon": "https://makronweb.vercel.app/assets/logo.png",
+    "url": "https://makron.app/",
+    "domain": "makron.app",
+    "tagline": "Online tools for everyday use",
+    "category": "Creativity"
+  },
+  {
+    "id": "excite",
+    "name": "Excite",
+    "icon": "https://xze.vercel.app/icon.png",
+    "url": "https://xze.vercel.app/",
+    "domain": "xze.vercel.app",
+    "tagline": "Social media platform",
+    "category": "Entertainment"
+  },
+  {
+    "id": "liaoverse",
+    "name": "Liaoverse",
+    "icon": "https://huanmux.github.io/assets/logo/liaotian.png",
+    "url": "https://liaoverse.vercel.app/",
+    "domain": "liaoverse.vercel.app",
+    "tagline": "Social media platform",
+    "category": "Social"
+  },
+  {
+    "id": "vibe",
+    "name": "Vibe",
+    "icon": "https://senvibe.vercel.app/favicon.png",
+    "url": "https://senvibe.vercel.app/",
+    "domain": "senvibe.vercel.app",
+    "tagline": "Easy virtual watch parties & VC",
+    "category": "Entertainment"
+  },
+  {
+    "id": "send",
+    "name": "Send",
+    "icon": "https://ssend.vercel.app/logo.svg",
+    "url": "https://ssend.vercel.app/",
+    "domain": "ssend.vercel.app",
+    "tagline": "P2P file sharing & messaging",
+    "category": "Utility"
+  },
+  {
+    "id": "brush",
+    "name": "BRUSH",
+    "icon": "https://brushonline.vercel.app/icon.png",
+    "url": "https://brushonline.vercel.app/",
+    "domain": "brushonline.vercel.app",
+    "tagline": "Resource hub for students at BRAC University",
+    "category": "Creativity"
+  }
+]

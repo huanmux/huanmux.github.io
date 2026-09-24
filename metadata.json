@@ -1,0 +1,7 @@
+{
+  "name": "HuanMux",
+  "description": "HuanMux - The home of everything related to the cultivation of art, science, technology, research and entertainment.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
