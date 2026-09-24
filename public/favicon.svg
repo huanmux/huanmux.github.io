@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Multi-Stop Mesh Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7eb3" />
+      <stop offset="25%" stop-color="#ff758c" />
+      <stop offset="50%" stop-color="#7a73ff" />
+      <stop offset="75%" stop-color="#2298f8" />
+      <stop offset="100%" stop-color="#00f2fe" />
+    </linearGradient>
+
+    <!-- Radial Soft Glow Accents for Authentic Mesh Appearance -->
+    <radialGradient id="pinkGlow" cx="20%" cy="15%" r="60%">
+      <stop offset="0%" stop-color="#ff72a5" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#ff72a5" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#ff72a5" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="cyanGlow" cx="85%" cy="85%" r="55%">
+      <stop offset="0%" stop-color="#00f5d4" stop-opacity="0.95" />
+      <stop offset="45%" stop-color="#05dfd7" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#05dfd7" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="blueGlow" cx="20%" cy="85%" r="50%">
+      <stop offset="0%" stop-color="#2979ff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#2979ff" stop-opacity="0" />
+    </radialGradient>
+
+    <clipPath id="squircleClip">
+      <rect x="0" y="0" width="512" height="512" rx="115" ry="115" />
+    </clipPath>
+  </defs>
+
+  <!-- Squircle Base with Blended Mesh Gradient -->
+  <g clip-path="url(#squircleClip)">
+    <rect width="512" height="512" fill="url(#bgGrad)" />
+    <rect width="512" height="512" fill="url(#pinkGlow)" />
+    <rect width="512" height="512" fill="url(#cyanGlow)" />
+    <rect width="512" height="512" fill="url(#blueGlow)" />
+
+    <!-- HuanMux Origami 'M' Mark (EvenOdd Fill Rule for Exact Cutouts) -->
+    <path
+      d="
+        M 186 160
+        L 256 232
+        L 326 160
+        L 402 336
+        L 256 314
+        L 110 336
+        Z
+        M 191 232
+        L 177 274
+        L 229 264
+        Z
+        M 321 232
+        L 283 264
+        L 335 274
+        Z
+      "
+      fill="#ffffff"
+      fill-rule="evenodd"
+    />
+  </g>
+</svg>
