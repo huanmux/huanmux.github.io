@@ -21,7 +21,7 @@
     "id": "makron",
     "name": "Makron",
     "icon": "https://makronweb.vercel.app/assets/logo.png",
-    "url": "https://makron.app/",
+    "url": "https://makron.mux8.com/",
     "domain": "makron.app",
     "tagline": "Online tools for everyday use",
     "category": "Creativity"
@@ -30,7 +30,7 @@
     "id": "excite",
     "name": "Excite",
     "icon": "https://xze.vercel.app/icon.png",
-    "url": "https://xze.vercel.app/",
+    "url": "https://excite.mux8.com/",
     "domain": "xze.vercel.app",
     "tagline": "Social media platform",
     "category": "Entertainment"
@@ -38,8 +38,8 @@
   {
     "id": "liaoverse",
     "name": "Liaoverse",
-    "icon": "https://huanmux.github.io/assets/logo/liaotian.png",
-    "url": "https://liaoverse.vercel.app/",
+    "icon": "https://huanmux.vercel.app/assets/logo/liaotian.png",
+    "url": "https://liaoverse.mux8.com/",
     "domain": "liaoverse.vercel.app",
     "tagline": "Social media platform",
     "category": "Social"
@@ -48,7 +48,7 @@
     "id": "vibe",
     "name": "Vibe",
     "icon": "https://senvibe.vercel.app/favicon.png",
-    "url": "https://senvibe.vercel.app/",
+    "url": "https://vibe.mux8.com/",
     "domain": "senvibe.vercel.app",
     "tagline": "Easy virtual watch parties & VC",
     "category": "Entertainment"
@@ -57,7 +57,7 @@
     "id": "send",
     "name": "Send",
     "icon": "https://ssend.vercel.app/logo.svg",
-    "url": "https://ssend.vercel.app/",
+    "url": "https://send.mux8.com/",
     "domain": "ssend.vercel.app",
     "tagline": "P2P file sharing & messaging",
     "category": "Utility"
@@ -66,7 +66,7 @@
     "id": "brush",
     "name": "BRUSH",
     "icon": "https://brushonline.vercel.app/icon.png",
-    "url": "https://brushonline.vercel.app/",
+    "url": "https://brush.mux8.com/",
     "domain": "brushonline.vercel.app",
     "tagline": "Resource hub for students at BRAC University",
     "category": "Creativity"
