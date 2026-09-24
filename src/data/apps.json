@@ -22,25 +22,25 @@
     "name": "Makron",
     "icon": "https://makronweb.vercel.app/assets/logo.png",
     "url": "https://makron.mux8.com/",
-    "domain": "makron.app",
+    "domain": "makron.mux8.com",
     "tagline": "Online tools for everyday use",
-    "category": "Creativity"
+    "category": "Utility"
   },
   {
     "id": "excite",
     "name": "Excite",
     "icon": "https://xze.vercel.app/icon.png",
     "url": "https://excite.mux8.com/",
-    "domain": "xze.vercel.app",
+    "domain": "excite.mux8.com",
     "tagline": "Social media platform",
-    "category": "Entertainment"
+    "category": "Social"
   },
   {
     "id": "liaoverse",
     "name": "Liaoverse",
     "icon": "https://huanmux.vercel.app/assets/logo/liaotian.png",
     "url": "https://liaoverse.mux8.com/",
-    "domain": "liaoverse.vercel.app",
+    "domain": "liaoverse.mux8.com",
     "tagline": "Social media platform",
     "category": "Social"
   },
@@ -49,16 +49,16 @@
     "name": "Vibe",
     "icon": "https://senvibe.vercel.app/favicon.png",
     "url": "https://vibe.mux8.com/",
-    "domain": "senvibe.vercel.app",
+    "domain": "vibe.mux8.com",
     "tagline": "Easy virtual watch parties & VC",
-    "category": "Entertainment"
+    "category": "Social"
   },
   {
     "id": "send",
     "name": "Send",
     "icon": "https://ssend.vercel.app/logo.svg",
     "url": "https://send.mux8.com/",
-    "domain": "ssend.vercel.app",
+    "domain": "send.mux8.com",
     "tagline": "P2P file sharing & messaging",
     "category": "Utility"
   },
@@ -67,8 +67,8 @@
     "name": "BRUSH",
     "icon": "https://brushonline.vercel.app/icon.png",
     "url": "https://brush.mux8.com/",
-    "domain": "brushonline.vercel.app",
+    "domain": "brush.mux8.com",
     "tagline": "Resource hub for students at BRAC University",
-    "category": "Creativity"
+    "category": "Utility"
   }
 ]
