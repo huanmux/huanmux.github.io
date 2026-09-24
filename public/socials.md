@@ -7,7 +7,7 @@ Social platform accounts managed by **Mux** staff:
 
 |Platform|Username/Link|
 |:---|:---|
-|<i class="fas fa-link"></i> Website|[huanmux.github.io](https://huanmux.github.io/)|
+|<i class="fas fa-link"></i> Website|[huanmux.vercel.app](https://huanmux.vercel.app/)|
 |<i class="fab fa-facebook"></i> Facebook|[@huanmux](https://www.facebook.com/huanmux)|
 |<i class="fab fa-instagram"></i> Instagram|[@huanmux](https://www.instagram.com/huanmux)|
 |<i class="fab fa-threads"></i> Threads|[@huanmux](https://www.threads.com/@huanmux)|
@@ -24,4 +24,4 @@ Social platform accounts managed by **Mux** staff:
 |<i class="fab fa-pinterest"></i> Pinterest|[@huanmuxglobal](https://www.pinterest.com/huanmuxglobal/)|
 |<i class="fas fa-dragon"></i> Liaoverse|[@mux](https://liaoverse.vercel.app/?user=mux)|
 
-For a list of all publicly-available Mux products, visit [this page](https://huanmux.github.io/products).
+For a list of all publicly-available Mux products, visit [this page](https://huanmux.vercel.app/products).

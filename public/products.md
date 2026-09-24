@@ -1,13 +1,13 @@
-Tentative list of official [Mux](https://huanmux.github.io) products accessible by the public.
+Tentative list of official [Mux](https://huanmux.vercel.app) products accessible by the public.
 
 ## Mux Webapps
 
 ||||
 |---|---|---|
-| <img src="https://huanmux.github.io/assets/logo/liaotian.png" width="40" height="40" alt="icon"> [**Liaoverse**](https://liaoverse.vercel.app) | <img src="https://avatars.githubusercontent.com/u/235305696?s=200&v=4" width="40" height="40" alt="icon"> [**BRAX**](https://braxapp.github.io) | <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--document-add-bold-duotone.svg" width="40" height="40" alt="icon"> [**Acado**](https://acadolife.vercel.app) |
-| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--shield-network-bold-duotone.svg" width="40" height="40" alt="icon"> [**iKnow**](https://huanmux.github.io/iknow) | <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--bus-bold-duotone.svg" width="40" height="40" alt="icon"> [**Jackbus**](https://huanmux.github.io/metrobus-tracker) | <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--case-bold-duotone.svg" width="40" height="40" alt="icon"> [**Mizu CV**](https://mizucv.vercel.app) |
-| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--home-wifi-angle-bold-duotone.svg" width="40" height="40" alt="icon"> [**Netstate**](https://huanmux.github.io/netstate) | <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--pen-new-round-bold-duotone.svg" width="40" height="40" alt="icon"> [(Mux) **Paint**](https://huanmux.github.io/paint) | <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--scanner-bold-duotone.svg" width="40" height="40" alt="icon"> [(Mux) **QR**](https://huanmux.github.io/qrcode) |
-| <img src="https://huanmux.github.io/assets/iconify-solar-480-designs/solar--plain-2-bold-duotone.svg" width="40" height="40" alt="icon"> [**Skywatch**](https://huanmux.github.io/skywatch) |
+| <img src="https://huanmux.vercel.app/assets/logo/liaotian.png" width="40" height="40" alt="icon"> [**Liaoverse**](https://liaoverse.vercel.app) | <img src="https://avatars.githubusercontent.com/u/235305696?s=200&v=4" width="40" height="40" alt="icon"> [**BRAX**](https://braxapp.github.io) | <img src="https://huanmux.vercel.app/assets/iconify-solar-480-designs/solar--document-add-bold-duotone.svg" width="40" height="40" alt="icon"> [**Acado**](https://acadolife.vercel.app) |
+| <img src="https://huanmux.vercel.app/assets/iconify-solar-480-designs/solar--shield-network-bold-duotone.svg" width="40" height="40" alt="icon"> [**iKnow**](https://huanmux.vercel.app/iknow) | <img src="https://huanmux.vercel.app/assets/iconify-solar-480-designs/solar--bus-bold-duotone.svg" width="40" height="40" alt="icon"> [**Jackbus**](https://huanmux.vercel.app/metrobus-tracker) | <img src="https://huanmux.vercel.app/assets/iconify-solar-480-designs/solar--case-bold-duotone.svg" width="40" height="40" alt="icon"> [**Mizu CV**](https://mizucv.vercel.app) |
+| <img src="https://huanmux.vercel.app/assets/iconify-solar-480-designs/solar--home-wifi-angle-bold-duotone.svg" width="40" height="40" alt="icon"> [**Netstate**](https://huanmux.vercel.app/netstate) | <img src="https://huanmux.vercel.app/assets/iconify-solar-480-designs/solar--pen-new-round-bold-duotone.svg" width="40" height="40" alt="icon"> [(Mux) **Paint**](https://huanmux.vercel.app/paint) | <img src="https://huanmux.vercel.app/assets/iconify-solar-480-designs/solar--scanner-bold-duotone.svg" width="40" height="40" alt="icon"> [(Mux) **QR**](https://huanmux.vercel.app/qrcode) |
+| <img src="https://huanmux.vercel.app/assets/iconify-solar-480-designs/solar--plain-2-bold-duotone.svg" width="40" height="40" alt="icon"> [**Skywatch**](https://huanmux.vercel.app/skywatch) |
 
 ## Mux Games
 
@@ -40,4 +40,4 @@ Tentative list of official [Mux](https://huanmux.github.io) products accessible 
 
 More Mux products coming soon! (Including consumer electronics and hardware devices.)
 
-For contact options, visit [this page](https://huanmux.github.io/socials).
+For contact options, visit [this page](https://huanmux.vercel.app/socials).
