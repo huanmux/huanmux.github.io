@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
-interface HeaderProps {
+interface CustomPageHeaderProps {
+  onGoHome: () => void;
   onNavigate?: (slug: string) => void;
-  onNavigateToPosts?: () => void;
+  onOpenThemeDrawer?: () => void; // Deprecated in header: theme switch is retained in floating dock
+  onGoToPosts?: () => void;
   currentSlug?: string;
 }
 
-export const Header: React.FC<HeaderProps> = ({
+export const CustomPageHeader: React.FC<CustomPageHeaderProps> = ({
+  onGoHome,
   onNavigate,
-  onNavigateToPosts,
+  onGoToPosts,
   currentSlug = '',
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Close mobile menu on resize to desktop
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -27,10 +29,14 @@ export const Header: React.FC<HeaderProps> = ({
 
   const handleLinkClick = (slug: string) => {
     setIsMobileMenuOpen(false);
-    if (slug === 'posts' && onNavigateToPosts) {
-      onNavigateToPosts();
+    if (slug === 'home') {
+      onGoHome();
+    } else if (slug === 'posts' && onGoToPosts) {
+      onGoToPosts();
     } else if (onNavigate) {
       onNavigate(slug);
+    } else if (slug === 'posts') {
+      window.location.pathname = '/posts';
     }
   };
 
@@ -44,15 +50,13 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="themed-header sticky top-0 z-30 border-b backdrop-blur-xl transition-colors">
       <div className="flex items-center justify-between px-4 sm:px-8 py-3.5 max-w-7xl mx-auto">
-        {/* Brand / Logo */}
+        {/* Top-left: Logo + Wordmark */}
         <button
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className="flex items-center gap-2.5 cursor-pointer group text-left"
-          title="HuanMux"
+          onClick={onGoHome}
+          className="flex items-center gap-2.5 cursor-pointer group transition-transform active:scale-95 text-left"
+          title="Return to HuanMux Home"
         >
-          <div className="w-7 h-7 rounded-lg overflow-hidden border border-inherit/20 shrink-0 shadow-xs transition-transform duration-200 group-hover:scale-105">
+          <div className="relative w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl overflow-hidden border border-inherit/20 shrink-0 shadow-xs transition-transform duration-300 group-hover:scale-105">
             <img
               src="https://huanmux.vercel.app/assets/logo/icon.png"
               alt="HuanMux Logo"
@@ -107,6 +111,12 @@ export const Header: React.FC<HeaderProps> = ({
       {/* Mobile Drawer / Dropdown */}
       {isMobileMenuOpen && (
         <div className="md:hidden border-t border-inherit/10 px-6 py-4 space-y-2 bg-inherit/95 backdrop-blur-2xl shadow-xl animate-in slide-in-from-top-2 duration-200">
+          <button
+            onClick={() => handleLinkClick('home')}
+            className="w-full text-left py-2.5 text-sm font-medium opacity-80 hover:opacity-100 hover:text-[var(--accent)] transition-colors cursor-pointer"
+          >
+            Home
+          </button>
           {navLinks.map((item) => {
             const isActive = currentSlug === item.slug;
             return (

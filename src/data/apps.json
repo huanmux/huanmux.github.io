@@ -21,26 +21,26 @@
     "id": "makron",
     "name": "Makron",
     "icon": "https://makronweb.vercel.app/assets/logo.png",
-    "url": "https://makron.mux8.com/",
-    "domain": "makron.mux8.com",
+    "url": "https://makron.app/",
+    "domain": "makron.app",
     "tagline": "Online tools for everyday use",
-    "category": "Utility"
+    "category": "Creativity"
   },
   {
     "id": "excite",
     "name": "Excite",
     "icon": "https://xze.vercel.app/icon.png",
-    "url": "https://excite.mux8.com/",
-    "domain": "excite.mux8.com",
+    "url": "https://xze.vercel.app/",
+    "domain": "xze.vercel.app",
     "tagline": "Social media platform",
-    "category": "Social"
+    "category": "Entertainment"
   },
   {
     "id": "liaoverse",
     "name": "Liaoverse",
-    "icon": "https://huanmux.vercel.app/assets/logo/liaotian.png",
-    "url": "https://liaoverse.mux8.com/",
-    "domain": "liaoverse.mux8.com",
+    "icon": "https://huanmux.github.io/assets/logo/liaotian.png",
+    "url": "https://liaoverse.vercel.app/",
+    "domain": "liaoverse.vercel.app",
     "tagline": "Social media platform",
     "category": "Social"
   },
@@ -48,17 +48,17 @@
     "id": "vibe",
     "name": "Vibe",
     "icon": "https://senvibe.vercel.app/favicon.png",
-    "url": "https://vibe.mux8.com/",
-    "domain": "vibe.mux8.com",
+    "url": "https://senvibe.vercel.app/",
+    "domain": "senvibe.vercel.app",
     "tagline": "Easy virtual watch parties & VC",
-    "category": "Social"
+    "category": "Entertainment"
   },
   {
     "id": "send",
     "name": "Send",
     "icon": "https://ssend.vercel.app/logo.svg",
-    "url": "https://send.mux8.com/",
-    "domain": "send.mux8.com",
+    "url": "https://ssend.vercel.app/",
+    "domain": "ssend.vercel.app",
     "tagline": "P2P file sharing & messaging",
     "category": "Utility"
   },
@@ -66,9 +66,9 @@
     "id": "brush",
     "name": "BRUSH",
     "icon": "https://brushonline.vercel.app/icon.png",
-    "url": "https://brush.mux8.com/",
-    "domain": "brush.mux8.com",
+    "url": "https://brushonline.vercel.app/",
+    "domain": "brushonline.vercel.app",
     "tagline": "Resource hub for students at BRAC University",
-    "category": "Utility"
+    "category": "Creativity"
   }
 ]

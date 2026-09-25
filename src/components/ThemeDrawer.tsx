@@ -49,7 +49,7 @@ export const ThemeDrawer: React.FC<ThemeDrawerProps> = ({
             <Palette className="w-5 h-5" style={{ color: 'var(--accent)' }} />
             <div>
               <h2 className="font-display font-bold text-lg leading-none">Mux Design Themes</h2>
-              <p className="text-xs opacity-60 mt-1">10 Curated colorways from Serafina</p>
+              <p className="text-xs opacity-60 mt-1">Customize your viewing experience</p>
             </div>
           </div>
           <button

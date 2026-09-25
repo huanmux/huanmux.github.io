@@ -1,7 +1,18 @@
 import React from 'react';
 import { ExternalLink, Heart } from 'lucide-react';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onNavigate?: (slug: string) => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+  const handleLinkClick = (slug: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (onNavigate && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
+      e.preventDefault();
+      onNavigate(slug);
+    }
+  };
+
   return (
     <footer className="mt-20 border-t border-inherit/10 py-12 px-4 sm:px-8 max-w-7xl mx-auto z-10 relative">
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-inherit/10">
@@ -62,7 +73,18 @@ export const Footer: React.FC = () => {
       <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs opacity-50">
         <p>© 2026 HuanMux. All rights reserved.</p>
         <p className="flex items-center gap-1">
-          <span>Part of the Senturisk portfolio of brands</span>
+          <span>
+            Part of the{' '}
+            <a
+              href="https://senturisk.github.io/public/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:opacity-100 transition-opacity font-medium hover:text-[var(--accent)]"
+            >
+              Senturisk
+            </a>{' '}
+            portfolio of brands
+          </span>
           <Heart className="w-3 h-3 text-[var(--accent)] fill-current" />
         </p>
       </div>

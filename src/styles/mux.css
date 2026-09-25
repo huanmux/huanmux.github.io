@@ -846,3 +846,187 @@ h1, h2, h3, .font-display {
   background-color: var(--sidebar-bg);
   border-color: var(--sidebar-border);
 }
+
+/* ==========================================================================
+   5. MARKDOWN CUSTOM PAGES STYLES
+   ========================================================================== */
+
+.mux-markdown-body {
+  color: inherit;
+  font-family: inherit;
+}
+
+.mux-markdown-body h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-top: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: inherit;
+}
+
+@media (min-width: 640px) {
+  .mux-markdown-body h1 {
+    font-size: 3rem;
+  }
+}
+
+.mux-markdown-body h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  color: inherit;
+}
+
+.mux-markdown-body h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: inherit;
+}
+
+.mux-markdown-body h4,
+.mux-markdown-body h5,
+.mux-markdown-body h6 {
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: inherit;
+}
+
+.mux-markdown-body p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  opacity: 0.88;
+}
+
+.mux-markdown-body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.15s ease;
+}
+
+.mux-markdown-body a:hover {
+  opacity: 0.8;
+}
+
+.mux-markdown-body strong {
+  font-weight: 700;
+  color: inherit;
+  opacity: 1;
+}
+
+.mux-markdown-body em {
+  font-style: italic;
+}
+
+.mux-markdown-body ul {
+  list-style-type: disc;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1.75rem;
+  opacity: 0.88;
+}
+
+.mux-markdown-body ol {
+  list-style-type: decimal;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1.75rem;
+  opacity: 0.88;
+}
+
+.mux-markdown-body li {
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.65;
+}
+
+.mux-markdown-body blockquote {
+  border-left: 3px solid var(--accent);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 0.75rem 0.75rem 0;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.mux-markdown-body hr {
+  border: 0;
+  height: 1px;
+  background: rgba(128, 128, 128, 0.2);
+  margin: 2.5rem 0;
+}
+
+.mux-markdown-body code:not(pre code) {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.875em;
+  padding: 0.2em 0.45em;
+  border-radius: 0.375rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(128, 128, 128, 0.15);
+  color: var(--accent);
+}
+
+.mux-markdown-body table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.75rem 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.mux-markdown-body th {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.mux-markdown-body td {
+  padding: 0.75rem 1rem;
+  font-size: 0.925rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+}
+
+.mux-markdown-body tr:last-child td {
+  border-bottom: none;
+}
+
+.mux-markdown-body tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.mux-markdown-body img {
+  max-width: 100%;
+  border-radius: 1rem;
+  margin: 1.75rem 0;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.mux-markdown-body input[type="checkbox"] {
+  accent-color: var(--accent);
+  margin-right: 0.5rem;
+}
+
