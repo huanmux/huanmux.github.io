@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { CustomPageHeader } from './CustomPageHeader';
 import { CustomPageDock } from './CustomPageDock';
 import { Footer } from './Footer';
-import { Users, Cpu, Target, ShieldCheck, Layers, Sparkles } from 'lucide-react';
+import { Users, Cpu, Target, ShieldCheck, Layers, Sparkles, MapPin } from 'lucide-react';
 
 interface TeamPageProps {
   onGoHome: () => void;
@@ -13,6 +13,7 @@ interface TeamPageProps {
 interface TeamMember {
   name: string;
   domain: string;
+  location: string;
   focus: string;
   description: string;
   icon: React.ReactNode;
@@ -38,6 +39,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({
     {
       name: 'Dewan Mukto',
       domain: 'Operations',
+      location: 'Sylhet, Bangladesh',
       focus: 'Execution, Technical Systems, and Sovereign Publishing',
       description:
         'Oversees core systems operations, computational pipelines, product deployment, cross-disciplinary execution, and the realization of software releases across the HuanMux ecosystem.',
@@ -53,6 +55,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({
     {
       name: 'Mahir Chowdhury',
       domain: 'Strategy',
+      location: 'New York, USA',
       focus: 'Long-term Roadmaps, Ecosystem Positioning, and Research Trajectory',
       description:
         'Directs organizational foresight, venture expansion, multi-sector research alignment, and the strategic positioning of digital products within global software ecosystems.',
@@ -68,6 +71,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({
     {
       name: 'Abrar Ahmed',
       domain: 'Cybersecurity',
+      location: 'Dhaka, Bangladesh',
       focus: 'Threat Modeling, Cryptographic Integrity, and Systems Hardening',
       description:
         'Safeguards technical infrastructure, data privacy mechanisms, runtime security, access boundary verification, and continuous cryptographic hygiene across all applications and client runtimes.',
@@ -147,9 +151,10 @@ export const TeamPage: React.FC<TeamPageProps> = ({
                   {member.name}
                 </h3>
 
-                {/* Domain Focus Label */}
-                <div className="text-xs font-mono text-[var(--accent)] font-medium mb-3">
-                  Domain: {member.domain}
+                {/* Location */}
+                <div className="text-xs font-mono text-[var(--accent)] font-medium mb-3 flex items-center gap-1.5">
+                  <MapPin className="w-3.5 h-3.5 shrink-0 opacity-80" />
+                  <span>{member.location}</span>
                 </div>
 
                 {/* Description */}
@@ -176,20 +181,6 @@ export const TeamPage: React.FC<TeamPageProps> = ({
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Senturisk Umbrella Note */}
-        <div className="p-5 rounded-xl bg-white/5 border border-inherit/10 text-center text-xs opacity-75 max-w-xl mx-auto">
-          Collaborators and domain leaders across HuanMux coordinate alongside parent company{' '}
-          <a
-            href="https://senturisk.github.io/public/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:opacity-100 font-semibold hover:text-[var(--accent)]"
-          >
-            Senturisk
-          </a>
-          .
         </div>
       </main>
 

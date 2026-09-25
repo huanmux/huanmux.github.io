@@ -17,10 +17,13 @@ Rather than rigid corporate job titles or siloed hierarchies, our members comman
 ## Sovereign Domains of Work
 
 ### 1. Dewan Mukto — Operations
+**Location:** Sylhet, Bangladesh  
 Overseeing computational infrastructure, software production pipelines, technical publishing, and cross-functional execution across all HuanMux applications and releases.
 
 ### 2. Mahir Chowdhury — Strategy
+**Location:** New York, USA  
 Directing long-term organizational trajectory, multi-sector research roadmaps, venture development, and strategic positioning within modern technology ecosystems.
 
 ### 3. Abrar Ahmed — Cybersecurity
+**Location:** Dhaka, Bangladesh  
 Leading systems hardening, cryptographic protocol integrity, offensive/defensive threat modeling, runtime memory security, and client-side boundary defense.

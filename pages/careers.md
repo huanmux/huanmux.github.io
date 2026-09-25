@@ -20,4 +20,4 @@ There are currently no open positions or vacancies available at HuanMux. All act
 
 HuanMux is part of the **Senturisk** portfolio of brands. For broader corporate career inquiries, speculative applications, or employment opportunities across the Senturisk network, please contact the parent organization directly:
 
-- [Connect with Senturisk on LinkedIn](https://www.linkedin.com/in/senturisk)
+- [Connect with Senturisk on LinkedIn](https://www.linkedin.com/company/senturisk)

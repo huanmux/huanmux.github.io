@@ -137,7 +137,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({
 
             <div className="shrink-0 w-full sm:w-auto">
               <a
-                href="https://www.linkedin.com/in/senturisk"
+                href="https://www.linkedin.com/company/senturisk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="themed-send-btn w-full sm:w-auto px-6 py-3.5 rounded-xl text-sm font-semibold flex items-center justify-center gap-2.5 shadow-lg hover:scale-105 active:scale-95 transition-all group"
