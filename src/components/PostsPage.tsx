@@ -113,7 +113,7 @@ export const PostsPage: React.FC<PostsPageProps> = ({
     if (descMeta) {
       descMeta.setAttribute(
         'content',
-        'Explore comprehensive technical guides, architecture deep-dives, and tutorials on REST APIs, the MERN stack, Large Language Models (LLMs), and modern software engineering.'
+        'Explore comprehensive technical guides on Test-Driven Development (TDD), Docker, Vue.js 3, Webpack 5, Jest, modern LLM stacks (LangChain vs LangGraph vs LangSmith vs Langflow vs Langfuse), REST APIs, MERN, and software architecture.'
       );
     }
 
