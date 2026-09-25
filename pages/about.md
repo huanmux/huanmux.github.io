@@ -1,22 +1,23 @@
 ---
-title: "About HuanMux: Multidisciplinary Creative Brand & Studio"
-author: "Dewan Mukto"
+title: "About Mux: Multidisciplinary Creative Brand & Studio"
+author: "Mux Staff"
+authorImage: "https://dewanmukto.github.io/asset/images/MuxGames-icon.webp"
 date: "2026-09-25"
 category: "About"
 readTime: "3 min read"
-description: "How founder Dewan Mukto established HuanMux to publish original works spanning programming, interface design, and strategic marketing."
+description: "How founder Dewan Mukto established Mux to publish original works spanning programming, interface design, and strategic marketing."
 image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80"
 ---
 
-# About HuanMux
+# About Mux
 
-HuanMux (also known as Mux) is an independent creative studio and sovereign publishing brand dedicated to the cultivation of art, science, technology, research, and entertainment.
+Mux is an independent creative studio and sovereign publishing brand dedicated to the cultivation of art, science, technology, research, and entertainment.
 
-## The Origin of HuanMux
+## The Origin of Mux
 
-HuanMux was established by its founder, **Dewan Mukto**. Recognizing that modern technological workflows often restrict talent into narrow, isolated corporate tracks, Dewan Mukto set out to build an autonomous vehicle for multidisciplinary creation.
+Mux was established by its founder, **Dewan Mukto**. Recognizing that modern technological workflows often restrict talent into narrow, isolated corporate tracks, Dewan Mukto set out to build an autonomous vehicle for multidisciplinary creation.
 
-Leveraging extensive hands-on experience and deep technical knowledge across **computer programming**, **visual and interface design**, and **growth marketing**, Dewan Mukto designed HuanMux as a unified platform where software architecture and artistic craftsmanship merge directly.
+Leveraging extensive hands-on experience and deep technical knowledge across **computer programming**, **visual and interface design**, and **growth marketing**, Dewan Mukto designed Mux as a unified platform where software architecture and artistic craftsmanship merge directly.
 
 ## Triad of Disciplines
 
@@ -26,4 +27,4 @@ Leveraging extensive hands-on experience and deep technical knowledge across **c
 
 ## Corporate Affiliation
 
-HuanMux operates as an autonomous brand under the **Senturisk** portfolio of brands.
+Mux operates as an autonomous brand under the **Senturisk** portfolio of brands.

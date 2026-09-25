@@ -107,7 +107,7 @@ export const PostsPage: React.FC<PostsPageProps> = ({
   // Set document title & SEO for the Posts Index
   useEffect(() => {
     const originalTitle = document.title;
-    document.title = 'Posts & Technical Guides — HuanMux';
+    document.title = 'Posts & Technical Guides — Mux';
 
     const descMeta = document.querySelector('meta[name="description"]');
     if (descMeta) {
@@ -129,12 +129,12 @@ export const PostsPage: React.FC<PostsPageProps> = ({
     const schema = {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
-      name: 'HuanMux Posts & Technical Guides',
+      name: 'Mux Posts & Technical Guides',
       description: 'Comprehensive educational articles on REST APIs, MERN stack, and LLMs.',
       url: `${window.location.origin}/posts`,
       publisher: {
         '@type': 'Organization',
-        name: 'HuanMux',
+        name: 'Mux',
         url: window.location.origin,
       },
       mainEntity: {
@@ -416,10 +416,10 @@ export const PostsPage: React.FC<PostsPageProps> = ({
           <div className="space-y-8 sm:space-y-10">
             {filteredAndSortedPages.map((page, index) => {
               const sitelinks = extractSectionLinks(page.rawMarkdown);
-              const author = page.frontmatter.author || 'HuanMux Technical Staff';
+              const author = page.frontmatter.author || 'Mux Staff';
               const authorImg =
                 page.frontmatter.authorImage ||
-                'https://huanmux.vercel.app/assets/logo/icon.png';
+                'https://dewanmukto.github.io/asset/images/MuxGames-icon.webp';
               const dateStr = formatPostDate(page.frontmatter.date);
               const readTime = page.frontmatter.readTime || '10 min read';
               const category = page.frontmatter.category || 'Architecture';
@@ -438,7 +438,7 @@ export const PostsPage: React.FC<PostsPageProps> = ({
                       <div className="w-6 h-6 rounded-full overflow-hidden border border-inherit/20 shrink-0 bg-black/40 flex items-center justify-center p-0.5 shadow-sm">
                         <img
                           src="https://huanmux.vercel.app/assets/logo/icon.png"
-                          alt="HuanMux"
+                          alt="Mux"
                           className="w-full h-full object-cover rounded-full"
                           onError={(e) => {
                             e.currentTarget.src = '/mux-appicon.png';
@@ -448,7 +448,7 @@ export const PostsPage: React.FC<PostsPageProps> = ({
 
                       {/* SERP Authentic Breadcrumb Hierarchy */}
                       <div className="flex flex-col sm:flex-row sm:items-center sm:gap-1.5 leading-tight">
-                        <span className="font-semibold text-inherit text-xs">HuanMux</span>
+                        <span className="font-semibold text-inherit text-xs">Mux</span>
                         <div className="flex items-center gap-1 font-mono text-[11px] opacity-65 truncate max-w-[220px] sm:max-w-md">
                           <span>https://huanmux.vercel.app</span>
                           <span className="opacity-40">›</span>
@@ -603,10 +603,10 @@ export const PostsPage: React.FC<PostsPageProps> = ({
           /* ========================================================================= */
           <div className="space-y-8 sm:space-y-10">
             {filteredAndSortedPages.map((page, index) => {
-              const author = page.frontmatter.author || 'HuanMux Engineering';
+              const author = page.frontmatter.author || 'Mux Staff';
               const authorImg =
                 page.frontmatter.authorImage ||
-                'https://huanmux.vercel.app/assets/logo/icon.png';
+                'https://dewanmukto.github.io/asset/images/MuxGames-icon.webp';
               const bannerImg =
                 page.frontmatter.image ||
                 page.frontmatter.banner ||
@@ -706,11 +706,11 @@ export const PostsPage: React.FC<PostsPageProps> = ({
                         <div className="w-4 h-4 rounded-md overflow-hidden bg-black/40 border border-inherit/20 flex items-center justify-center">
                           <img
                             src="https://huanmux.vercel.app/assets/logo/icon.png"
-                            alt="HuanMux"
+                            alt="Mux"
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        <span>HuanMux Post #{index + 1} &bull; OpenGraph 2.0</span>
+                        <span>Mux Post #{index + 1} &bull; OpenGraph 2.0</span>
                       </div>
 
                       {/* Action buttons */}

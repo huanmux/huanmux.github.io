@@ -28,7 +28,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({
 
   useEffect(() => {
     const originalTitle = document.title;
-    document.title = 'Careers — HuanMux';
+    document.title = 'Careers — Mux';
     window.scrollTo({ top: 0, behavior: 'instant' });
     return () => {
       document.title = originalTitle;
@@ -67,7 +67,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({
 
         {/* Page Title */}
         <h1 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">
-          Careers at HuanMux
+          Careers at Mux
         </h1>
         <p className="text-base sm:text-lg opacity-80 leading-relaxed max-w-2xl mb-10">
           Discover opportunities to work across sovereign domains of work in computing, engineering, interface design, and product strategy.
@@ -83,7 +83,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({
               <div className="space-y-2 max-w-sm">
                 <div className="font-bold text-base">Querying Available Positions...</div>
                 <div className="text-xs opacity-60 font-mono">
-                  Synchronizing with HuanMux domain records &amp; Senturisk recruitment database
+                  Synchronizing with Mux domain records &amp; Senturisk recruitment database
                 </div>
               </div>
 
@@ -103,7 +103,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({
                   No Job Openings Found
                 </h2>
                 <p className="text-xs sm:text-sm opacity-75 leading-relaxed">
-                  There are currently no active job vacancies or open employment positions at HuanMux. All current domains of work are fully staffed.
+                  There are currently no active job vacancies or open employment positions at Mux. All current domains of work are fully staffed.
                 </p>
               </div>
 
@@ -131,7 +131,7 @@ export const CareersPage: React.FC<CareersPageProps> = ({
                 Employment Opportunities at Senturisk
               </h2>
               <p className="text-xs sm:text-sm opacity-80 leading-relaxed">
-                HuanMux is part of the <strong className="font-semibold text-inherit">Senturisk</strong> portfolio of brands. For broad career inquiries, corporate roles, speculative applications, or employment opportunities across the Senturisk collective, reach out directly to the parent company.
+                Mux is part of the <strong className="font-semibold text-inherit">Senturisk</strong> portfolio of brands. For broad career inquiries, corporate roles, speculative applications, or employment opportunities across the Senturisk collective, reach out directly to the parent company.
               </p>
             </div>
 

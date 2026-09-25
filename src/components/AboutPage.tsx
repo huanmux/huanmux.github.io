@@ -17,7 +17,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
 }) => {
   useEffect(() => {
     const originalTitle = document.title;
-    document.title = 'About — HuanMux';
+    document.title = 'About — Mux';
     window.scrollTo({ top: 0, behavior: 'instant' });
     return () => {
       document.title = originalTitle;
@@ -42,7 +42,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
 
         {/* Page Title */}
         <h1 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight mb-4 sm:mb-6">
-          About HuanMux
+          About Mux
         </h1>
         <p className="text-base sm:text-lg opacity-80 leading-relaxed max-w-2xl mb-12">
           An independent creative studio and software publishing brand founded by Dewan Mukto, dedicated to the cultivation of art, science, technology, research, and entertainment.
@@ -55,20 +55,20 @@ export const AboutPage: React.FC<AboutPageProps> = ({
               <Compass className="w-5 h-5 text-[var(--accent)]" />
             </div>
             <div>
-              <h2 className="text-lg sm:text-xl font-bold tracking-tight">The Origin of HuanMux</h2>
+              <h2 className="text-lg sm:text-xl font-bold tracking-tight">The Origin of Mux</h2>
               <p className="text-xs opacity-60">Founded by Dewan Mukto</p>
             </div>
           </div>
 
           <div className="space-y-4 text-sm sm:text-base opacity-85 leading-relaxed">
             <p>
-              HuanMux was born out of a clear realization by founder <strong className="font-semibold text-inherit">Dewan Mukto</strong>: modern computational work has become excessively fragmented, isolating engineering from aesthetics and strategy.
+              Mux was born out of a clear realization by founder <strong className="font-semibold text-inherit">Dewan Mukto</strong>: modern computational work has become excessively fragmented, isolating engineering from aesthetics and strategy.
             </p>
             <p>
               Drawing upon extensive knowledge and years of hands-on experience across <strong className="text-inherit">computer programming</strong>, <strong className="text-inherit">interface and visual design</strong>, and <strong className="text-inherit">growth marketing</strong>, Dewan Mukto decided to establish his own independent brand to publish original software works, research initiatives, and creative tools directly to the world without bureaucratic dilution.
             </p>
             <p>
-              HuanMux operates as an autonomous publishing house and engineering laboratory where software architecture, typography, algorithmic reasoning, and user distribution coalesce into cohesive, human-centered experiences.
+              Mux operates as an autonomous publishing house and engineering laboratory where software architecture, typography, algorithmic reasoning, and user distribution coalesce into cohesive, human-centered experiences.
             </p>
           </div>
         </section>

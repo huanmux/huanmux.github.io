@@ -22,12 +22,12 @@ export const CustomPage: React.FC<CustomPageProps> = ({
   // Update document title, description, SEO, and AEO (Answer Engine Optimization) tags
   useEffect(() => {
     const originalTitle = document.title;
-    const pageTitle = `${page.title} — HuanMux`;
+    const pageTitle = `${page.title} — Mux`;
     document.title = pageTitle;
 
     const canonicalUrl = `${window.location.origin}/${page.slug}`;
-    const authorName = page.frontmatter.author || 'HuanMux Engineering';
-    const authorImg = page.frontmatter.authorImage || 'https://huanmux.vercel.app/assets/logo/Mux_appicon.png';
+    const authorName = page.frontmatter.author || 'Mux Staff';
+    const authorImg = page.frontmatter.authorImage || 'https://dewanmukto.github.io/asset/images/MuxGames-icon.webp';
     const description = page.frontmatter.description || 'In-depth technical architecture and engineering guide.';
     const keywords = page.frontmatter.keywords || 'engineering, technology, software architecture';
 
@@ -61,7 +61,7 @@ export const CustomPage: React.FC<CustomPageProps> = ({
     setOrCreateMeta('meta[property="og:description"]', 'property', 'og:description', description);
     setOrCreateMeta('meta[property="og:type"]', 'property', 'og:type', 'article');
     setOrCreateMeta('meta[property="og:url"]', 'property', 'og:url', canonicalUrl);
-    setOrCreateMeta('meta[property="og:site_name"]', 'property', 'og:site_name', 'HuanMux');
+    setOrCreateMeta('meta[property="og:site_name"]', 'property', 'og:site_name', 'Mux');
     setOrCreateMeta('meta[property="og:image"]', 'property', 'og:image', authorImg);
 
     // Twitter Card Tags
@@ -109,7 +109,7 @@ export const CustomPage: React.FC<CustomPageProps> = ({
         },
         publisher: {
           '@type': 'Organization',
-          name: 'HuanMux',
+          name: 'Mux',
           url: window.location.origin,
           logo: {
             '@type': 'ImageObject',
@@ -275,7 +275,7 @@ export const CustomPage: React.FC<CustomPageProps> = ({
                   alt={page.frontmatter.author || 'Author'}
                   className="w-full h-full object-cover"
                   onError={(e) => {
-                    e.currentTarget.src = 'https://huanmux.vercel.app/assets/logo/Mux_appicon.png';
+                    e.currentTarget.src = 'https://dewanmukto.github.io/asset/images/MuxGames-icon.webp';
                   }}
                 />
               </div>
@@ -283,7 +283,7 @@ export const CustomPage: React.FC<CustomPageProps> = ({
             <div>
               <div className="text-[11px] uppercase tracking-wider opacity-60 font-semibold">Author</div>
               <div className="font-bold text-sm sm:text-base leading-tight">
-                {page.frontmatter.author || 'HuanMux Contributor'}
+                {page.frontmatter.author || 'Mux Staff'}
               </div>
               <div className="flex flex-wrap items-center gap-2 text-xs opacity-60 mt-1">
                 {page.frontmatter.date && <span>{page.frontmatter.date}</span>}

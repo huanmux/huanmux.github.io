@@ -2,8 +2,8 @@
 title: "The Complete Guide to REST APIs: Architecture, HTTP Methods, Design Principles & Security"
 description: "Master REST APIs from fundamental concepts to advanced architectural design. Explore Roy Fielding's 6 constraints, HTTP methods, status codes, authentication, and best practices."
 keywords: "REST API, RESTful architecture, HTTP methods, API design, REST constraints, Roy Fielding, HTTP status codes, API security, JWT, rate limiting, OpenAPI"
-author: "Dr. Elena Vance"
-authorImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80"
+author: "Mux Staff"
+authorImage: "https://dewanmukto.github.io/asset/images/MuxGames-icon.webp"
 date: "September 20, 2026"
 category: "Backend Engineering"
 readTime: "12 min read"
@@ -138,8 +138,8 @@ Experience how an HTTP client communicates with a RESTful backend in real time. 
       data: {
         status: "success",
         data: [
-          { id: 101, name: "Dr. Elena Vance", email: "elena@huanmux.dev", role: "Architect" },
-          { id: 102, name: "Marcus Chen", email: "marcus@huanmux.dev", role: "Lead" }
+          { id: 101, name: "Dr. Elena Vance", email: "elena@mux.dev", role: "Architect" },
+          { id: 102, name: "Marcus Chen", email: "marcus@mux.dev", role: "Lead" }
         ],
         pagination: { total: 2, page: 1, limit: 10 }
       }
@@ -153,7 +153,7 @@ Experience how an HTTP client communicates with a RESTful backend in real time. 
         created_resource: {
           id: 103,
           name: "New Contributor",
-          email: "contributor@huanmux.dev",
+          email: "contributor@mux.dev",
           created_at: new Date().toISOString()
         }
       }
