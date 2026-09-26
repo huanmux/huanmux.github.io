@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live2D Parallax Sandbox</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #1a1a2e;
+            background-image: radial-gradient(circle at center, #2a2a4e 0%, #1a1a2e 100%);
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .character-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            pointer-events: none; /* Prevents dragging the images */
+            will-change: transform; /* Optimizes for animation performance */
+        }
+    </style>
+</head>
+<body>
+    <div class="character-container" id="character">
+        <!-- 
+            Invisible spacer image to naturally dictate the height and aspect ratio 
+            of the container based on the original image dimensions.
+        -->
+        <img src="https://huanmux.github.io/assets/image/serafina/face.png" class="w-full h-auto opacity-0 pointer-events-none" alt="spacer" />
+
+        <!-- Layer 5 (Bottom): Back Hair -->
+        <img src="https://huanmux.github.io/assets/image/serafina/back-hair.png" 
+             class="layer z-10" alt="Back Hair">
+
+        <!-- Layer 4: Torso & Neck -->
+        <img src="https://huanmux.github.io/assets/image/serafina/torso-neck.png" 
+             class="layer z-20" alt="Torso">
+
+        <!-- Layer 3: Face -->
+        <img src="https://huanmux.github.io/assets/image/serafina/face.png" 
+             class="layer z-30" alt="Face">
+
+        <!-- Layer 2: Eyes & Irises (This is the ONLY layer that will move) -->
+        <img src="https://huanmux.github.io/assets/image/serafina/eyes-irises.png" 
+             id="eyes-layer"
+             class="layer z-40" alt="Eyes">
+
+        <!-- Layer 1 (Top): Front Hair -->
+        <img src="https://huanmux.github.io/assets/image/serafina/front-hair.png" 
+             class="layer z-50" alt="Front Hair">
+    </div>
+
+    <script>
+        const eyesLayer = document.getElementById('eyes-layer');
+        
+        // Target coordinates mapped between -1 and 1
+        let targetX = 0;
+        let targetY = 0;
+        
+        // Current coordinates used for smoothing (linear interpolation)
+        let currentX = 0;
+        let currentY = 0;
+
+        // Maximum distance the eyes are allowed to move (in pixels)
+        // Kept very small for a subtle, realistic effect
+        const maxEyeMoveX = 6; 
+        const maxEyeMoveY = 4;
+
+        // Track mouse movement
+        window.addEventListener('mousemove', (e) => {
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+            
+            // Normalize mouse position (-1 to 1)
+            targetX = (e.clientX - centerX) / centerX;
+            targetY = (e.clientY - centerY) / centerY;
+        });
+
+        // Track touch movement for mobile devices
+        window.addEventListener('touchmove', (e) => {
+            if (e.touches.length > 0) {
+                const centerX = window.innerWidth / 2;
+                const centerY = window.innerHeight / 2;
+                
+                targetX = (e.touches[0].clientX - centerX) / centerX;
+                targetY = (e.touches[0].clientY - centerY) / centerY;
+            }
+        });
+
+        function animate() {
+            // Smoothly move current position towards the target position (Lerp factor: 0.1)
+            // A lower lerp factor makes it "heavier" and smoother
+            currentX += (targetX - currentX) * 0.1;
+            currentY += (targetY - currentY) * 0.1;
+
+            // Calculate exact pixel displacements based on the maximum allowed bounds
+            const moveX = currentX * maxEyeMoveX;
+            const moveY = currentY * maxEyeMoveY;
+
+            // Apply the transformation only to the eyes layer
+            eyesLayer.style.transform = `translate(${moveX}px, ${moveY}px)`;
+
+            // Loop the animation to match the screen's refresh rate
+            requestAnimationFrame(animate);
+        }
+
+        // Start the animation loop
+        animate();
+    </script>
+</body>
+</html>
