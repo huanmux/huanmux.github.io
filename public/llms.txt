@@ -1,0 +1,36 @@
+# HuanMux
+
+> HuanMux (Mux) is a sovereign multidisciplinary creative brand, technology collective, and technical publication studio dedicated to cultivating art, science, technology, research, and entertainment.
+
+## Core Pages & Architecture
+- [Home](https://huanmux.vercel.app/): Interactive ecosystem showcase, live applications grid, and brand philosophy.
+- [About](https://huanmux.vercel.app/about): Origins of HuanMux, founder Dewan Mukto's creative philosophy, and multidisciplinary studio mission.
+- [Team](https://huanmux.vercel.app/team): Sovereign domains of work, current staff, and alumni across Software/IT, Strategy, Art/Design, Marketing, Music, and Animation.
+- [Careers](https://huanmux.vercel.app/careers): Talent pathways, creative roles, and contact channels through parent company Senturisk.
+- [Posts & Technical Guides](https://huanmux.vercel.app/posts): Archive of in-depth engineering documentation, architecture teardowns, and comparison matrices.
+
+## Technical Guides & Architectural Deep Dives
+- [Docker Explained: Architecture, Containerization, Dockerfile Mastery, Networking & Production Orchestration](https://huanmux.vercel.app/docker): The complete technical guide to Docker. Understand containerization vs virtualization, Linux namespaces, cgroups, image layering, Dockerfile directives, multi-stage builds, networking, and Docker Compose. *(Category: DevOps & Cloud Infrastructure, Author: Mux Staff)*
+- [Jest Testing Framework: Architecture, Matchers, Mocking Mastery, Snapshot Testing & Coverage Strategies](https://huanmux.vercel.app/jest): Master Jest from fundamental assertions to advanced enterprise mocking. Explore test sandboxing, JSDOM, spies, module mocking, fake timers, snapshot testing, and CI/CD code coverage thresholds. *(Category: Testing & Quality Assurance, Author: Mux Staff)*
+- [LangChain vs LangGraph vs LangSmith vs Langflow vs Langfuse: The Definitive Modern LLM Stack Comparison](https://huanmux.vercel.app/langchain-vs-langgraph-vs-langsmith-vs-langflow-vs-langfuse): Demystify the modern AI engineering ecosystem. Compare LangChain, LangGraph, LangSmith, Langflow, and Langfuse across architecture, statefulness, observability, and production multi-agent deployment. *(Category: Artificial Intelligence & Machine Learning, Author: Mux Staff)*
+- [How Large Language Models (LLMs) Work: From Transformers and Pre-training to Next-Token Prediction](https://huanmux.vercel.app/llms-how-they-work): Explore the inner mechanics of Large Language Models. Learn about tokenization, self-attention, the Transformer architecture, pre-training, fine-tuning (SFT & RLHF), and temperature sampling. *(Category: Artificial Intelligence & Machine Learning, Author: Mux Staff)*
+- [The MERN Stack Explained: MongoDB, Express.js, React & Node.js Architecture & Data Flow](https://huanmux.vercel.app/mern-stack): An in-depth technical guide to the MERN stack. Understand how MongoDB, Express, React, and Node.js connect, handle requests, and scale in modern web development. *(Category: Full-Stack Web Development, Author: Mux Staff)*
+- [The Complete Guide to REST APIs: Architecture, HTTP Methods, Design Principles & Security](https://huanmux.vercel.app/rest-apis): Master REST APIs from fundamental concepts to advanced architectural design. Explore Roy Fielding's 6 constraints, HTTP methods, status codes, authentication, and best practices. *(Category: Backend Engineering, Author: Mux Staff)*
+- [Test-Driven Development (TDD): The Complete Architectural Guide, Red-Green-Refactor Cycle & Practical Patterns](https://huanmux.vercel.app/test-driven-development): Master Test-Driven Development (TDD) from foundational principles to advanced enterprise patterns. Explore the Red-Green-Refactor loop, Uncle Bob's 3 Laws, Test Doubles, and real-world implementation. *(Category: Testing & Quality Assurance, Author: Mux Staff)*
+- [Vue.js 3 Deep Dive: The Progressive Framework, Composition API, Reactivity Engine & Ecosystem Architecture](https://huanmux.vercel.app/vue-js): Master Vue.js 3 from foundational principles to advanced enterprise engineering. Explore the ES6 Proxy reactivity system, Composition API, Single File Components, Pinia, Vue Router 4, and compiler optimizations. *(Category: Frontend Engineering, Author: Mux Staff)*
+- [Webpack 5 Architecture & Mastery: Dependency Graphs, Loaders, Plugins, Tree-Shaking & Module Federation](https://huanmux.vercel.app/webpack): The definitive guide to Webpack 5. Master module bundling, the Tapable hooks architecture, loaders, plugins, optimization.splitChunks, dead code elimination, and Module Federation for micro-frontends. *(Category: Build Tools & Compilers, Author: Mux Staff)*
+
+## Software Applications & Creative Ecosystem
+- [MuxAI](https://ai.mux8.com/): Customizable uncensored LLM personas *(Category: Intelligence, Domain: ai.mux8.com)*
+- [Serafina](https://serafina.mux8.com/): Virtual private consultant (subset of MuxAI). *(Category: Intelligence, Domain: serafina.mux8.com)*
+- [Makron](https://makron.app/): Online tools for everyday use *(Category: Creativity, Domain: makron.app)*
+- [Excite](https://xze.vercel.app/): Social media platform *(Category: Entertainment, Domain: xze.vercel.app)*
+- [Liaoverse](https://liaoverse.vercel.app/): Social media platform *(Category: Social, Domain: liaoverse.vercel.app)*
+- [Vibe](https://senvibe.vercel.app/): Easy virtual watch parties & VC *(Category: Entertainment, Domain: senvibe.vercel.app)*
+- [Send](https://ssend.vercel.app/): P2P file sharing & messaging *(Category: Utility, Domain: ssend.vercel.app)*
+- [BRUSH](https://brushonline.vercel.app/): Resource hub for students at BRAC University *(Category: Creativity, Domain: brushonline.vercel.app)*
+
+## Automated Feeds & Discovery
+- [XML Sitemap](https://huanmux.vercel.app/sitemap.xml): Dynamic sitemap indexing all published routes and guides.
+- [Robots.txt](https://huanmux.vercel.app/robots.txt): Machine crawler instructions and bot access policies.
+- [Full LLM Knowledge Stream](https://huanmux.vercel.app/llms-full.txt): Complete concatenated text corpus of all guides and technical documentation for large-context LLM ingestion and RAG.

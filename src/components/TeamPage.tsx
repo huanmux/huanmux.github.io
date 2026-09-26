@@ -86,12 +86,12 @@ export const TeamPage: React.FC<TeamPageProps> = ({
     },
     {
       name: 'Abrar Ahmed',
-      domain: 'Cybersecurity',
+      domain: 'Software/IT',
       location: 'Dhaka, Bangladesh',
       focus: 'Threat Modeling, Cryptographic Integrity, and Systems Hardening',
       description:
         'Safeguards technical infrastructure, data privacy mechanisms, runtime security, access boundary verification, and continuous cryptographic hygiene across all applications and client runtimes.',
-      icon: <ShieldCheck className="w-4 h-4 text-purple-400" />,
+      icon: <Code2 className="w-4 h-4 text-sky-400" />,
       capabilities: [
         'Threat Modeling',
         'Information Security',

@@ -3,6 +3,64 @@ import react from '@vitejs/plugin-react';
 import fs from 'fs';
 import path from 'path';
 import {defineConfig, Plugin} from 'vite';
+import {
+  generateSitemapXml,
+  generateRobotsTxt,
+  generateLlmsTxt,
+  generateLlmsFullTxt,
+  generateAllSeoFiles,
+} from './src/utils/seoGeneratorNode';
+
+function dynamicSeoPlugin(): Plugin {
+  return {
+    name: 'vite-plugin-dynamic-seo',
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        const url = req.url?.split('?')[0];
+        if (url === '/sitemap.xml') {
+          const xml = generateSitemapXml();
+          res.statusCode = 200;
+          res.setHeader('Content-Type', 'application/xml; charset=utf-8');
+          res.setHeader('Cache-Control', 'no-cache');
+          res.end(xml);
+          return;
+        }
+        if (url === '/robots.txt') {
+          const txt = generateRobotsTxt();
+          res.statusCode = 200;
+          res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+          res.setHeader('Cache-Control', 'no-cache');
+          res.end(txt);
+          return;
+        }
+        if (url === '/llms.txt') {
+          const txt = generateLlmsTxt();
+          res.statusCode = 200;
+          res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+          res.setHeader('Cache-Control', 'no-cache');
+          res.end(txt);
+          return;
+        }
+        if (url === '/llms-full.txt') {
+          const txt = generateLlmsFullTxt();
+          res.statusCode = 200;
+          res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+          res.setHeader('Cache-Control', 'no-cache');
+          res.end(txt);
+          return;
+        }
+        next();
+      });
+    },
+    closeBundle() {
+      const rootDir = process.cwd();
+      const distDir = path.resolve(rootDir, 'dist');
+      const publicDir = path.resolve(rootDir, 'public');
+      generateAllSeoFiles([distDir, publicDir], 'https://huanmux.vercel.app', rootDir);
+      console.log('[dynamic-seo] Automated dynamic sitemap.xml, robots.txt, and llms.txt generated.');
+    },
+  };
+}
 
 function markdownPagesPlugin(): Plugin {
   return {
@@ -228,7 +286,7 @@ function markdownPagesPlugin(): Plugin {
 
 export default defineConfig(() => {
   return {
-    plugins: [react(), tailwindcss(), markdownPagesPlugin()],
+    plugins: [react(), tailwindcss(), dynamicSeoPlugin(), markdownPagesPlugin()],
     resolve: {
       alias: {
         '@': path.resolve(process.cwd(), '.'),

@@ -24,7 +24,7 @@
     "url": "https://makron.app/",
     "domain": "makron.app",
     "tagline": "Online tools for everyday use",
-    "category": "Creativity"
+    "category": "Utility"
   },
   {
     "id": "excite",
@@ -33,7 +33,7 @@
     "url": "https://xze.vercel.app/",
     "domain": "xze.vercel.app",
     "tagline": "Social media platform",
-    "category": "Entertainment"
+    "category": "Social"
   },
   {
     "id": "liaoverse",
@@ -51,7 +51,7 @@
     "url": "https://senvibe.vercel.app/",
     "domain": "senvibe.vercel.app",
     "tagline": "Easy virtual watch parties & VC",
-    "category": "Entertainment"
+    "category": "Social"
   },
   {
     "id": "send",
@@ -69,6 +69,6 @@
     "url": "https://brushonline.vercel.app/",
     "domain": "brushonline.vercel.app",
     "tagline": "Resource hub for students at BRAC University",
-    "category": "Creativity"
+    "category": "Utility"
   }
 ]

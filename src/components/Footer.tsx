@@ -70,6 +70,65 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
       </div>
 
+      {/* Exploration & Machine Discovery Links */}
+      <div className="py-4 border-b border-inherit/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs font-mono opacity-65">
+        <div className="flex flex-wrap items-center gap-3 sm:gap-5">
+          <a
+            href="/posts"
+            onClick={handleLinkClick('/posts')}
+            className="hover:opacity-100 hover:text-[var(--accent)] transition-all"
+          >
+            Posts &amp; Guides
+          </a>
+          <a
+            href="/about"
+            onClick={handleLinkClick('/about')}
+            className="hover:opacity-100 hover:text-[var(--accent)] transition-all"
+          >
+            About
+          </a>
+          <a
+            href="/team"
+            onClick={handleLinkClick('/team')}
+            className="hover:opacity-100 hover:text-[var(--accent)] transition-all"
+          >
+            Team
+          </a>
+          <a
+            href="/careers"
+            onClick={handleLinkClick('/careers')}
+            className="hover:opacity-100 hover:text-[var(--accent)] transition-all"
+          >
+            Careers
+          </a>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-[11px]">
+          <span className="opacity-40 uppercase tracking-widest text-[10px]">Machine Feeds:</span>
+          <a
+            href="/sitemap.xml"
+            onClick={handleLinkClick('/sitemap.xml')}
+            className="px-2 py-0.5 rounded bg-white/5 border border-inherit/15 hover:border-[var(--accent)] hover:text-[var(--accent)] transition-all"
+          >
+            sitemap.xml
+          </a>
+          <a
+            href="/robots.txt"
+            onClick={handleLinkClick('/robots.txt')}
+            className="px-2 py-0.5 rounded bg-white/5 border border-inherit/15 hover:border-[var(--accent)] hover:text-[var(--accent)] transition-all"
+          >
+            robots.txt
+          </a>
+          <a
+            href="/llms.txt"
+            onClick={handleLinkClick('/llms.txt')}
+            className="px-2 py-0.5 rounded bg-white/5 border border-inherit/15 hover:border-[var(--accent)] hover:text-[var(--accent)] transition-all"
+          >
+            llms.txt
+          </a>
+        </div>
+      </div>
+
       <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs opacity-50">
         <p>© 2026 HuanMux. All rights reserved.</p>
         <p className="flex items-center gap-1">

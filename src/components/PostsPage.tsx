@@ -100,9 +100,14 @@ export const PostsPage: React.FC<PostsPageProps> = ({
   const [copiedSlug, setCopiedSlug] = useState<string | null>(null);
   const [activeMenuSlug, setActiveMenuSlug] = useState<string | null>(null);
 
+  // Exclude About, Team, and Careers pages from posts listings
+  const EXCLUDED_SLUGS = useMemo(() => new Set(['about', 'team', 'careers']), []);
+
   const allPages = useMemo(() => {
-    return getAllMarkdownPages();
-  }, []);
+    return getAllMarkdownPages().filter(
+      (page) => !EXCLUDED_SLUGS.has(page.slug.toLowerCase().trim())
+    );
+  }, [EXCLUDED_SLUGS]);
 
   // Set document title & SEO for the Posts Index
   useEffect(() => {

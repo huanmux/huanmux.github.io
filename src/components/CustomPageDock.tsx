@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Home, Palette, ArrowUp } from 'lucide-react';
+import { ChibiYunaPuppet } from './ChibiYunaPuppet';
 
 interface CustomPageDockProps {
   onGoHome: () => void;
@@ -29,6 +30,11 @@ export const CustomPageDock: React.FC<CustomPageDockProps> = ({
       aria-label="Custom Page Quick Navigation Dock"
       className="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 px-3 py-2 rounded-full themed-dock backdrop-blur-2xl shadow-2xl flex items-center gap-1.5 sm:gap-2 transition-all duration-300"
     >
+      {/* Chibi Character Mascot Puppet (Yuna) Centered Just Above Floating Navbar */}
+      <div className="absolute bottom-[calc(100%+6px)] left-1/2 -translate-x-1/2 pointer-events-auto">
+        <ChibiYunaPuppet />
+      </div>
+
       {/* 1. Home Button */}
       <button
         onClick={onGoHome}

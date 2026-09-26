@@ -22,6 +22,8 @@ import { PostsPage } from './components/PostsPage';
 import { AboutPage } from './components/AboutPage';
 import { TeamPage } from './components/TeamPage';
 import { CareersPage } from './components/CareersPage';
+import { SeoViewerPage, SeoTab } from './components/SeoViewerPage';
+import { CustomCursor } from './components/CustomCursor';
 import { getMarkdownPageBySlug } from './utils/markdownParser';
 import { ArrowLeft, ArrowRight, FileText, Home } from 'lucide-react';
 
@@ -97,7 +99,12 @@ export default function App() {
   const isTeamPage = normalizedSlug === 'team';
   const isCareersPage = normalizedSlug === 'careers';
   const isPostsPage = normalizedSlug === 'posts';
-  const isSpecialPage = isHomePage || isAboutPage || isTeamPage || isCareersPage || isPostsPage;
+  const isSitemap = normalizedSlug === 'sitemap.xml' || normalizedSlug === 'sitemap';
+  const isRobots = normalizedSlug === 'robots.txt' || normalizedSlug === 'robots';
+  const isLlms = normalizedSlug === 'llms.txt' || normalizedSlug === 'llms';
+  const isLlmsFull = normalizedSlug === 'llms-full.txt' || normalizedSlug === 'llms-full';
+  const isSeoPage = isSitemap || isRobots || isLlms || isLlmsFull || normalizedSlug === 'seo';
+  const isSpecialPage = isHomePage || isAboutPage || isTeamPage || isCareersPage || isPostsPage || isSeoPage;
   const matchedCustomPage = isSpecialPage ? null : getMarkdownPageBySlug(normalizedSlug);
 
   // Reset title when on homepage
@@ -111,6 +118,7 @@ export default function App() {
   if (isAboutPage) {
     return (
       <div className="relative min-h-screen themed-bg themed-text overflow-x-hidden selection:bg-[var(--selection-bg)] selection:text-[var(--selection-text)]">
+        <CustomCursor />
         <AboutPage
           onGoHome={handleGoHome}
           onNavigate={navigateTo}
@@ -130,6 +138,7 @@ export default function App() {
   if (isTeamPage) {
     return (
       <div className="relative min-h-screen themed-bg themed-text overflow-x-hidden selection:bg-[var(--selection-bg)] selection:text-[var(--selection-text)]">
+        <CustomCursor />
         <TeamPage
           onGoHome={handleGoHome}
           onNavigate={navigateTo}
@@ -149,6 +158,7 @@ export default function App() {
   if (isCareersPage) {
     return (
       <div className="relative min-h-screen themed-bg themed-text overflow-x-hidden selection:bg-[var(--selection-bg)] selection:text-[var(--selection-text)]">
+        <CustomCursor />
         <CareersPage
           onGoHome={handleGoHome}
           onNavigate={navigateTo}
@@ -168,7 +178,34 @@ export default function App() {
   if (isPostsPage) {
     return (
       <div className="relative min-h-screen themed-bg themed-text overflow-x-hidden selection:bg-[var(--selection-bg)] selection:text-[var(--selection-text)]">
+        <CustomCursor />
         <PostsPage
+          onGoHome={handleGoHome}
+          onNavigate={navigateTo}
+          onOpenThemeDrawer={() => setIsThemeDrawerOpen(true)}
+        />
+        <ThemeDrawer
+          isOpen={isThemeDrawerOpen}
+          onClose={() => setIsThemeDrawerOpen(false)}
+          currentTheme={theme}
+          onSelectTheme={handleSelectTheme}
+        />
+      </div>
+    );
+  }
+
+  // If on SEO & LLM discovery page (/sitemap.xml, /robots.txt, /llms.txt, /llms-full.txt, /seo)
+  if (isSeoPage) {
+    let initialTab: SeoTab = 'sitemap';
+    if (isRobots) initialTab = 'robots';
+    else if (isLlms) initialTab = 'llms';
+    else if (isLlmsFull) initialTab = 'llms-full';
+
+    return (
+      <div className="relative min-h-screen themed-bg themed-text overflow-x-hidden selection:bg-[var(--selection-bg)] selection:text-[var(--selection-text)]">
+        <CustomCursor />
+        <SeoViewerPage
+          initialTab={initialTab}
           onGoHome={handleGoHome}
           onNavigate={navigateTo}
           onOpenThemeDrawer={() => setIsThemeDrawerOpen(true)}
@@ -187,6 +224,7 @@ export default function App() {
   if (matchedCustomPage) {
     return (
       <div className="relative min-h-screen themed-bg themed-text overflow-x-hidden selection:bg-[var(--selection-bg)] selection:text-[var(--selection-text)]">
+        <CustomCursor />
         <CustomPage
           page={matchedCustomPage}
           onGoHome={handleGoHome}
@@ -207,6 +245,7 @@ export default function App() {
   if (!isHomePage && !matchedCustomPage && !isSpecialPage) {
     return (
       <div className="relative min-h-screen themed-bg themed-text flex flex-col justify-between selection:bg-[var(--selection-bg)] selection:text-[var(--selection-text)]">
+        <CustomCursor />
         <CustomPageHeader
           onGoHome={handleGoHome}
           onNavigate={navigateTo}
@@ -270,6 +309,7 @@ export default function App() {
   // Standard Home Landing Page (Everything intact!)
   return (
     <div className="relative min-h-screen themed-bg themed-text overflow-x-hidden selection:bg-[var(--selection-bg)] selection:text-[var(--selection-text)]">
+      <CustomCursor />
       {/* 1. Ambient Background (Auroras + Procedural Grid) */}
       <AmbientBackground />
 

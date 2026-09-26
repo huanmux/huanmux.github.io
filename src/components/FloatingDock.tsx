@@ -8,6 +8,7 @@ import {
   Search,
   SkipForward,
 } from 'lucide-react';
+import { ChibiYunaPuppet } from './ChibiYunaPuppet';
 
 interface FloatingDockProps {
   onScrollToApps: () => void;
@@ -102,6 +103,11 @@ export const FloatingDock: React.FC<FloatingDockProps> = ({
       aria-label="Quick Navigation Dock"
       className="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 px-3 py-2 rounded-full themed-dock backdrop-blur-2xl shadow-2xl flex items-center gap-1.5 sm:gap-2 transition-all duration-300"
     >
+      {/* Chibi Character Mascot Puppet (Yuna) Centered Just Above Floating Navbar */}
+      <div className="absolute bottom-[calc(100%+6px)] left-1/2 -translate-x-1/2 pointer-events-auto">
+        <ChibiYunaPuppet />
+      </div>
+
       {/* 1. App Launcher shortcut */}
       <button
         onClick={onScrollToApps}
